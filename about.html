@@ -43,7 +43,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="flex items-center">
                 <a href="contact.html" class="hidden md:block btn-modern bg-blue-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-md">Get a Quote</a>
                 <button class="md:hidden text-white p-2" onclick="toggleMobileMenu()">
@@ -66,15 +65,14 @@
         </div>
     </div>
 
-    <main class="flex-grow pt-40 pb-20 px-6">
+    <main class="flex-grow pt-40 pb-32 px-6">
         <div class="max-w-4xl mx-auto text-center mb-24 fade-up">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-xs uppercase tracking-widest mb-6 shadow-sm">Our Story</div>
-            <h1 class="text-5xl md:text-6xl font-heading font-black tracking-tight mb-6 text-slate-900 leading-[1.1]">Built by an Engineer.<br>For Engineers.</h1>
-            <p class="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed font-medium">Robetix exists because real robotics problems deserve real engineering solutions to work under harsh and complex environments.</p>
+            <h1 class="text-5xl md:text-6xl font-heading font-black tracking-tight mb-6 text-slate-900 leading-[1.1]">Built by Engineers.<br>For Engineers.</h1>
+            <p class="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">Robetix exists because real robotics problems deserve real engineering solutions to work under harsh and complex environments.</p>
         </div>
 
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 items-center">
-            
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 items-center half-scroll mb-32">
             <div class="w-64 h-64 md:w-80 md:h-80 shrink-0 stylish-img-wrap fade-up delay-100 relative">
                 <div class="absolute inset-0 bg-blue-600 rounded-[2.5rem] transform rotate-6 opacity-20"></div>
                 <div class="absolute inset-0 bg-blue-600 rounded-[2.5rem] transform -rotate-3 opacity-40"></div>
@@ -85,7 +83,7 @@
             </div>
 
             <div class="space-y-6 text-slate-600 leading-relaxed font-medium fade-up">
-                <h2 class="text-3xl font-heading font-extrabold text-slate-900 mb-6">The Person Behind Robetix</h2>
+                <h2 class="text-3xl md:text-4xl font-heading font-black text-slate-900 mb-6 tracking-tight">The Person Behind Robetix</h2>
                 <p>Robetix was founded by Shah Zaman Haider, a Robotics and IoT Systems Integrator specializing in Unmanned Aerial Vehicles (UAVs) and autonomous systems. As a graduate in Intelligent Systems and Robotics, Shah has built a foundation bridging advanced research with practical, real-world deployment.</p>
                 <p>Leading a multi-disciplinary team of 10 engineering specialists, Shah ensures every project, from custom PCB layouts to ROS 2 navigation stacks, is executed with precision. With experience ranging from research at the National Center for AI to developing autonomous Search and Rescue hexacopters, Robetix operates on a simple principle: we build hardware and software that works seamlessly in the field with harsh environments, not just in simulation.</p>
                 
@@ -103,31 +101,53 @@
             </div>
         </div>
 
-        <div class="max-w-5xl mx-auto mt-40">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row-reverse gap-16 items-center half-scroll mb-32">
+            <div class="w-64 h-64 md:w-80 md:h-80 shrink-0 stylish-img-wrap fade-up delay-100 relative">
+                <div class="absolute inset-0 bg-amber-500 rounded-[2.5rem] transform -rotate-6 opacity-20"></div>
+                <div class="absolute inset-0 bg-amber-500 rounded-[2.5rem] transform rotate-3 opacity-40"></div>
+                <div class="w-full h-full bg-slate-200 rounded-[2.5rem] flex items-center justify-center relative z-10 shadow-2xl overflow-hidden group border-4 border-white">
+                    <img src="cofounder-image.jpg" alt="Co-Founder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <span class="hidden text-slate-400 font-extrabold text-2xl group-hover:scale-110 transition-transform">Co-Founder</span>
+                </div>
+            </div>
+
+            <div class="space-y-6 text-slate-600 leading-relaxed font-medium fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-black text-slate-900 mb-6 tracking-tight">Meet the Co-Founder</h2>
+                <p>Bringing complementary expertise to Robetix, our Co-Founder specializes in hardware architecture and systems scalability. Together, we manage complex integrations that span from initial prototyping to mass production.</p>
+                <p>With a shared vision for robust, field-ready robotics, our leadership team ensures that every client receives not just a product, but a fully operational engineering solution.</p>
+                
+                <div class="flex gap-4 pt-4">
+                    <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto mt-20 half-scroll">
             <div class="text-center mb-12 fade-up">
-                <h3 class="text-3xl font-heading font-extrabold text-slate-900 mb-4">Our Philosophy</h3>
+                <h3 class="text-3xl font-heading font-black text-slate-900 mb-4 tracking-tight">Our Philosophy</h3>
                 <p class="text-slate-500 font-medium">The principles that guide our engineering.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover fade-up">
-                    <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-900 mb-6 font-bold">1</div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-900 mb-6 font-bold text-lg">1</div>
                     <h4 class="font-heading font-extrabold text-slate-900 mb-3 text-lg">No Magic</h4>
                     <p class="text-sm text-slate-500 font-medium leading-relaxed">We don't rely on black-box software. If we implement it, we understand the math and the hardware limits underneath it.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover fade-up delay-100">
-                    <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-900 mb-6 font-bold">2</div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-900 mb-6 font-bold text-lg">2</div>
                     <h4 class="font-heading font-extrabold text-slate-900 mb-3 text-lg">Bias to Action</h4>
                     <p class="text-sm text-slate-500 font-medium leading-relaxed">Simulations are useful, but reality is the only benchmark that matters. We prioritize getting systems into the field quickly.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm card-hover fade-up delay-200">
-                    <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-900 mb-6 font-bold">3</div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-900 mb-6 font-bold text-lg">3</div>
                     <h4 class="font-heading font-extrabold text-slate-900 mb-3 text-lg">Clean Handoffs</h4>
                     <p class="text-sm text-slate-500 font-medium leading-relaxed">Our code is documented, our schematics are clear, and we ensure you can actually maintain the system after we deliver it.</p>
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer class="bg-white border-t border-slate-200 pt-20 pb-10 mt-32 relative z-10">
@@ -168,7 +188,7 @@
                 <div class="md:col-span-2">
                     <h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Contact</h4>
                     <ul class="space-y-4 text-sm text-slate-500 font-medium">
-                        <li><a href="mailto:hello@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
+                        <li><a href="mailto:sz@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
                         <li><a href="https://www.fiverr.com/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">Fiverr</a></li>
                     </ul>
                 </div>
