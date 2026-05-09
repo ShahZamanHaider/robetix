@@ -2,11 +2,18 @@
    ROBETIX — Premium CSS
    ============================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #f8fafc;
     color: #0f172a;
     overflow-x: hidden;
+}
+
+/* Headings Font - Clean, Professional Silicon Valley look */
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Inter', sans-serif;
 }
 
 /* Modern Silicon Valley Background */
@@ -27,6 +34,14 @@ body {
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Professional Logo Text */
+.logo-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.125rem;
 }
 
 /* Submenu Hover Bridge Fix */
@@ -76,31 +91,28 @@ body {
 .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 30px -4px rgba(0,0,0,0.08); }
 
-/* Infinite Scroll Marquee for Reviews (Never Pauses) */
+/* Infinite Scroll Marquee */
 .marquee-container { display: flex; overflow: hidden; width: 100%; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
 .marquee-content { display: flex; flex-shrink: 0; animation: scroll-left 35s linear infinite; }
 @keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* Services Page - Interactive Blur Grid Logic */
+/* Services Page - Interactive Blur Grid */
 .services-grid-wrap .blur-card {
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     filter: blur(0px) grayscale(0%);
     opacity: 1;
     transform: scale(1);
 }
-/* Professional hover state when nothing is clicked yet */
 .services-grid-wrap:not(.has-active) .blur-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 30px -4px rgba(37, 99, 235, 0.15);
     border-color: rgba(37, 99, 235, 0.3);
 }
-/* When one card is clicked, blur the others */
 .services-grid-wrap.has-active .blur-card {
     filter: blur(4px) grayscale(30%);
     opacity: 0.6;
     transform: scale(0.98);
 }
-/* The active card stays in focus and pops out */
 .services-grid-wrap.has-active .blur-card.active-service {
     filter: blur(0px) grayscale(0%);
     opacity: 1;
@@ -109,7 +121,6 @@ body {
     z-index: 10;
     border-color: #3b82f6;
 }
-/* Reveal Details */
 .service-details {
     max-height: 0; overflow: hidden; opacity: 0;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
