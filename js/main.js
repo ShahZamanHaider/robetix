@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, { threshold: 0.3 });
 
+        /* Observe the stats section wrapper */
         const statSection = document.getElementById('stats-section');
         if (statSection) statObserver.observe(statSection);
     }
