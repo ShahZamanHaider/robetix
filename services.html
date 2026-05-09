@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Robetix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }, colors: { blue: { 50: '#f0f6ff', 100: '#e0edff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } } } } }
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <div class="sv-bg"></div>
+
+    <header class="fixed top-6 left-0 w-full flex justify-center z-50 px-4">
+        <nav class="glass-nav-dark max-w-4xl w-full rounded-full px-4 py-2.5 flex items-center justify-between mx-auto">
+            <a href="index.html" class="flex items-center gap-2 pl-2">
+                <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.6)]">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <span class="font-extrabold text-white tracking-tight text-lg">Robetix</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="nav-link text-slate-300 px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:text-white">Home</a>
+                <a href="services.html" class="nav-link text-slate-300 px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:text-white">Services</a>
+                
+                <div class="relative nav-group">
+                    <button class="flex items-center gap-1 text-slate-300 text-sm font-semibold hover:text-white py-2 px-3 transition-colors outline-none">
+                        Pages <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="nav-submenu absolute top-full left-1/2 -translate-x-1/2 pt-4 w-48 z-50">
+                        <div class="bg-slate-900/95 backdrop-blur-xl border border-slate-700 rounded-2xl shadow-xl p-2 flex flex-col gap-1 min-w-[160px]">
+                            <a href="projects.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Projects</a>
+                            <a href="about.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">About Us</a>
+                            <a href="blog.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Insights</a>
+                            <a href="contact.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <a href="contact.html" class="hidden md:block btn-modern bg-blue-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-md">Get a Quote</a>
+                <button class="md:hidden text-white p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobileMenu" class="fixed inset-0 bg-slate-900/95 backdrop-blur z-[100] hidden flex-col items-center justify-center">
+        <button class="absolute top-8 right-8 p-2 text-white" onclick="toggleMobileMenu()">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <div class="flex flex-col gap-6 text-2xl font-bold text-slate-300 text-center">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="services.html" class="text-white">Services</a>
+            <a href="projects.html" class="hover:text-white">Projects</a>
+            <a href="about.html" class="hover:text-white">About</a>
+            <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-40 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center mb-16 fade-up">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-xs uppercase tracking-widest mb-6 shadow-sm">What We Do</div>
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-slate-900">Engineering Services</h1>
+            <p class="text-slate-500 text-lg md:text-xl leading-relaxed font-medium">Click on any card to reveal details. Default view is clear, unfocused items blur away.</p>
+        </div>
+
+        <div class="services-grid-wrap max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start relative">
+            
+            <div class="blur-card bg-white rounded-3xl p-6 border border-slate-200 cursor-pointer fade-up" onclick="toggleService(this)">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900">ROS 2 & Robotics</h3>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <p class="text-slate-500 text-sm font-medium mb-4">From simulation to field deployment. We build ROS 2 systems that actually navigate and make decisions.</p>
+                    <ul class="space-y-2 text-sm font-bold text-slate-700">
+                        <li>✓ ROS 2 node development</li>
+                        <li>✓ SLAM with LiDAR/RGB-D</li>
+                        <li>✓ Nav2 stack tuning</li>
+                        <li>✓ Gazebo simulation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blur-card bg-white rounded-3xl p-6 border border-slate-200 cursor-pointer fade-up delay-100" onclick="toggleService(this)">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900">PCB Design</h3>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <p class="text-slate-500 text-sm font-medium mb-4">Good firmware starts with good hardware. We design PCBs that are manufacturable and reliable.</p>
+                    <ul class="space-y-2 text-sm font-bold text-slate-700">
+                        <li>✓ Schematic capture</li>
+                        <li>✓ 2/4-layer layouts</li>
+                        <li>✓ Power & motor drivers</li>
+                        <li>✓ Gerber file generation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blur-card bg-white rounded-3xl p-6 border border-slate-200 cursor-pointer fade-up delay-200" onclick="toggleService(this)">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900">CAD Designs & Models</h3>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <p class="text-slate-500 text-sm font-medium mb-4">Mechanical design closing the loop between electronics and the physical world.</p>
+                    <ul class="space-y-2 text-sm font-bold text-slate-700">
+                        <li>✓ 3D modeling for robots</li>
+                        <li>✓ FDM-ready designs</li>
+                        <li>✓ DFM for CNC/sheet metal</li>
+                        <li>✓ Custom PCB mounting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blur-card bg-white rounded-3xl p-6 border border-slate-200 cursor-pointer fade-up" onclick="toggleService(this)">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900">Embedded Firmware</h3>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <p class="text-slate-500 text-sm font-medium mb-4">Structured firmware designed to survive production. Bare-metal or RTOS for constrained targets.</p>
+                    <ul class="space-y-2 text-sm font-bold text-slate-700">
+                        <li>✓ ESP32 / STM32</li>
+                        <li>✓ FreeRTOS Task Scheduling</li>
+                        <li>✓ UART, I2C, SPI, CAN</li>
+                        <li>✓ Custom Bootloaders</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blur-card bg-white rounded-3xl p-6 border border-slate-200 cursor-pointer fade-up delay-100" onclick="toggleService(this)">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-12 h-12 bg-sky-50 text-sky-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900">UAV Systems</h3>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <p class="text-slate-500 text-sm font-medium mb-4">Custom drone platforms integrating flight controllers, onboard compute, and mission planning.</p>
+                    <ul class="space-y-2 text-sm font-bold text-slate-700">
+                        <li>✓ Pixhawk / ArduPilot</li>
+                        <li>✓ MAVLink scripting</li>
+                        <li>✓ Autonomous navigation</li>
+                        <li>✓ Ground Control Stations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blur-card bg-white rounded-3xl p-6 border border-slate-200 cursor-pointer fade-up delay-200" onclick="toggleService(this)">
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900">Edge AI & Vision</h3>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <p class="text-slate-500 text-sm font-medium mb-4">Running ML on constrained hardware. We handle optimization for fast inference without a GPU.</p>
+                    <ul class="space-y-2 text-sm font-bold text-slate-700">
+                        <li>✓ Custom YOLOv8 deployment</li>
+                        <li>✓ TFLite/ONNX quantization</li>
+                        <li>✓ Sub-50ms inference</li>
+                        <li>✓ Person & pose detection</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 mt-auto relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 mb-12">
+                <div class="md:col-span-4">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <span class="font-extrabold text-slate-900 tracking-tight text-xl">Robetix</span>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed font-medium max-w-sm mb-6">
+                        Engineering intelligent physical systems. Embedded firmware, Edge AI, autonomous robots, and custom electronics.
+                    </p>
+                </div>
+                <div class="hidden md:block md:col-span-2"></div>
+                <div class="md:col-span-2">
+                    <h4 class="font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-wider">Services</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 font-medium">
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">ROS 2 & Robotics</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">PCB Design</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">CAD Designs</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">Embedded Systems</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">UAV Systems</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">Edge AI</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <h4 class="font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 font-medium">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About</a></li>
+                        <li><a href="projects.html" class="hover:text-blue-600 transition-colors">Portfolio</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-600 transition-colors">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <h4 class="font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-wider">Contact</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 font-medium">
+                        <li><a href="mailto:hello@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
+                        <li><a href="https://www.fiverr.com/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">Fiverr</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 pt-8 flex justify-center items-center">
+                <p class="text-sm font-medium text-slate-400">© 2026 Robetix. Registered under IPO Pakistan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
