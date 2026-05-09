@@ -95,18 +95,3 @@ function filterProjects(category, btn) {
         }
     });
 }
-
-function searchBlogs() {
-    const input = document.getElementById('blogSearch').value.toLowerCase();
-    let found = 0;
-    document.querySelectorAll('.blog-card').forEach(card => {
-        const title = card.querySelector('.blog-title').innerText.toLowerCase();
-        if(title.includes(input)) {
-            card.style.display = 'block'; found++;
-        } else {
-            card.style.display = 'none';
-        }
-    });
-    const noRes = document.getElementById('noResults');
-    if(noRes) noRes.style.display = found === 0 ? 'block' : 'none';
-}
