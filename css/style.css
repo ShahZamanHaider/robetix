@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
 }
 
+/* Remove Grid on Mobile (Keep Solid Clean Color) */
+@media (max-width: 768px) {
+    .sv-bg { background-image: none !important; }
+}
+
 /* Consistent Dark Glassmorphism Nav */
 .glass-nav-dark {
     background: rgba(15, 23, 42, 0.9);
@@ -36,35 +41,19 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* Professional Logo Text */
-.logo-text {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    font-size: 1.125rem;
-}
+.logo-text { font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: 0.5px; font-size: 1.125rem; }
 
 /* Submenu Hover Bridge Fix */
 .nav-group { position: relative; }
 .nav-submenu {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.2s ease;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    padding-top: 1rem;
-    z-index: 50;
+    visibility: hidden; opacity: 0; transform: translateY(10px); transition: all 0.2s ease;
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px);
+    padding-top: 1rem; z-index: 50;
 }
 .nav-group:hover .nav-submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    visibility: visible; opacity: 1; transform: translateX(-50%) translateY(0);
 }
 
-/* Hide Scrollbars */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -73,9 +62,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     0% { filter: blur(20px); opacity: 0; transform: scale(0.95); }
     100% { filter: blur(0px); opacity: 1; transform: scale(1); }
 }
-.text-blur-in {
-    animation: blur-in 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
+.text-blur-in { animation: blur-in 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
 
 /* Scroll Animations */
 .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -98,43 +85,30 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Services Page - Interactive Blur Grid */
 .services-grid-wrap .blur-card {
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: blur(0px) grayscale(0%);
-    opacity: 1;
-    transform: scale(1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); filter: blur(0px) grayscale(0%); opacity: 1; transform: scale(1);
 }
 .services-grid-wrap:not(.has-active) .blur-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px -4px rgba(37, 99, 235, 0.15);
-    border-color: rgba(37, 99, 235, 0.3);
+    transform: translateY(-4px); box-shadow: 0 12px 30px -4px rgba(37, 99, 235, 0.15); border-color: rgba(37, 99, 235, 0.3);
 }
 .services-grid-wrap.has-active .blur-card {
-    filter: blur(4px) grayscale(30%);
-    opacity: 0.6;
-    transform: scale(0.98);
+    filter: blur(4px) grayscale(30%); opacity: 0.6; transform: scale(0.98);
 }
 .services-grid-wrap.has-active .blur-card.active-service {
-    filter: blur(0px) grayscale(0%);
-    opacity: 1;
-    transform: scale(1.02);
-    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
-    z-index: 10;
-    border-color: #3b82f6;
+    filter: blur(0px) grayscale(0%); opacity: 1; transform: scale(1.02); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); z-index: 10; border-color: #3b82f6;
 }
-.service-details {
-    max-height: 0; overflow: hidden; opacity: 0;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.blur-card.active-service .service-details {
-    max-height: 300px; opacity: 1; padding-top: 1rem; margin-top: 1rem; border-top: 1px solid #e2e8f0;
-}
+.service-details { max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.blur-card.active-service .service-details { max-height: 300px; opacity: 1; padding-top: 1rem; margin-top: 1rem; border-top: 1px solid #e2e8f0; }
 
-/* About Page Stylish Image */
+/* Stylish Image */
 .stylish-img-wrap { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
 .stylish-img-wrap:hover { transform: rotate(0deg) scale(1.02); }
 
-/* UI Elements */
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; opacity: 0; }
-.faq-item.open .faq-answer { max-height: 200px; padding-bottom: 1rem; opacity: 1; }
-.faq-item.open .faq-icon { transform: rotate(45deg); }
 .project-wrap { transition: opacity 0.4s ease, transform 0.4s ease; }
+
+/* Half Scroll Spacing Utilities */
+.half-scroll {
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
