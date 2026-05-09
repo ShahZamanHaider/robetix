@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
     <script>
-        tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }, colors: { blue: { 50: '#f0f6ff', 100: '#e0edff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } }, boxShadow: { 'sv-card': '0 20px 50px -10px rgba(0,0,0,0.05)' } } } }
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }, colors: { blue: { 50: '#f0f6ff', 100: '#e0edff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } } } } }
     </script>
     <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -60,14 +60,14 @@
         </button>
         <div class="flex flex-col gap-6 text-2xl font-heading font-extrabold text-slate-400 text-center">
             <a href="index.html" class="text-white">Home</a>
-            <a href="services.html" class="hover:text-white">Services</a>
-            <a href="projects.html" class="hover:text-white">Projects</a>
-            <a href="about.html" class="hover:text-white">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
             <a href="contact.html" class="hover:text-white">Contact</a>
         </div>
     </div>
 
-    <main class="flex-grow pt-40 pb-20">
+    <main class="flex-grow pt-32 pb-20">
         
         <section class="max-w-6xl mx-auto px-6 half-scroll py-24">
             <div class="text-center">
@@ -125,24 +125,32 @@
                     </h2>
                 </div>
                 <div class="md:w-7/12 w-full">
-                    <div class="bg-white rounded-[2.5rem] p-10 md:p-14 shadow-sv-card border border-slate-100 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="grid grid-cols-2 gap-x-10 gap-y-16 relative z-10">
+                    <div class="relative overflow-hidden rounded-[2.5rem] border border-slate-200/60 bg-white/40 backdrop-blur-md p-10 md:p-14 group hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="grid grid-cols-2 gap-x-12 gap-y-16 relative z-10">
                             <div>
-                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="35">0</span><span class="text-blue-600">+</span></div>
-                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Projects Delivered</div>
+                                <div class="text-5xl md:text-6xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center">
+                                    <span class="counter" data-target="35">0</span><span class="text-blue-600 font-bold ml-1">+</span>
+                                </div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest leading-none">Projects Delivered</div>
                             </div>
                             <div>
-                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="12">0</span><span class="text-blue-600">+</span></div>
-                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Intl. Clients</div>
+                                <div class="text-5xl md:text-6xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center">
+                                    <span class="counter" data-target="12">0</span><span class="text-blue-600 font-bold ml-1">+</span>
+                                </div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest leading-none">Intl. Clients</div>
                             </div>
                             <div>
-                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="7">0</span></div>
-                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Core Technologies</div>
+                                <div class="text-5xl md:text-6xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center">
+                                    <span class="counter" data-target="7">0</span>
+                                </div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest leading-none">Core Tech</div>
                             </div>
                             <div>
-                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="100">0</span><span class="text-blue-600">%</span></div>
-                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Satisfaction</div>
+                                <div class="text-5xl md:text-6xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center">
+                                    <span class="counter" data-target="100">0</span><span class="text-blue-600 font-bold ml-1">%</span>
+                                </div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest leading-none">Satisfaction</div>
                             </div>
                         </div>
                     </div>
@@ -242,7 +250,7 @@
                             <p class="text-slate-700 text-sm font-semibold leading-relaxed">"The best person I have ever worked with... accurate in delivery, + he fixed my mistakes. I recommend him 100/100."</p>
                         </div>
                         <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                            <div class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold">M</div>
+                            <div class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold animate-pulse">M</div>
                             <div><h4 class="text-sm font-bold text-slate-900">Menweralhadedit</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Germany</p></div>
                         </div>
                     </div>
@@ -253,7 +261,7 @@
                             <p class="text-slate-700 text-sm font-semibold leading-relaxed">"A good developer who listens to everything I mention and gives out suggestions on how we can make functionality better."</p>
                         </div>
                         <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold">O</div>
+                            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold animate-pulse">O</div>
                             <div><h4 class="text-sm font-bold text-slate-900">Oula Oussi</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UAE</p></div>
                         </div>
                     </div>
@@ -264,30 +272,8 @@
                             <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Really nice guy! He understood what I needed and helped me. He answers fast. Highly recommend."</p>
                         </div>
                         <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-bold">J</div>
+                            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-bold animate-pulse">J</div>
                             <div><h4 class="text-sm font-bold text-slate-900">Jhonnybzh</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">France</p></div>
-                        </div>
-                    </div>
-                    <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="text-amber-400 mb-3 text-sm">★★★★☆</div>
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">PCB Design</div>
-                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Nice guy, want to do more projects with him."</p>
-                        </div>
-                        <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                            <div class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold">M</div>
-                            <div><h4 class="text-sm font-bold text-slate-900">Mark Anto</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UK</p></div>
-                        </div>
-                    </div>
-                    <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                        <div>
-                            <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
-                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Thanks so much, right now my code works well. He successfully solved my issue."</p>
-                        </div>
-                        <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                            <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold">S</div>
-                            <div><h4 class="text-sm font-bold text-slate-900">Sarah Councell</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Thailand</p></div>
                         </div>
                     </div>
                 </div>
