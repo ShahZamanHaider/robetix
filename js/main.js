@@ -3,8 +3,6 @@
    ============================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Set Active Nav Link
     const path = window.location.pathname;
     const page = path.split("/").pop() || "index.html";
     document.querySelectorAll('.nav-link').forEach(link => {
@@ -14,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2. Scroll Reveal Animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => { 
             if(e.isIntersecting) { 
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // 3. Stats Counter
     const statsSection = document.querySelector('.counter');
     if (statsSection) {
         const statObserver = new IntersectionObserver((entries) => {
@@ -50,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         statObserver.observe(statsSection.closest('.fade-up') || statsSection);
     }
 
-    // 4. Clone Marquee Content for smooth infinite scroll
     const marqueeContent = document.querySelector('.marquee-content');
     if(marqueeContent) {
         const clone = marqueeContent.cloneNode(true);
@@ -58,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Mobile Menu Toggle
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('hidden');
@@ -66,30 +60,23 @@ function toggleMobileMenu() {
     document.body.style.overflow = menu.classList.contains('hidden') ? 'auto' : 'hidden';
 }
 
-// Services Page Interactive Cards (Unblurred by default -> Blur others on click)
 function toggleService(card) {
     const grid = card.closest('.services-grid-wrap');
     const isActive = card.classList.contains('active-service');
     
-    // Reset all cards first
     grid.querySelectorAll('.blur-card').forEach(c => c.classList.remove('active-service'));
     
     if (isActive) {
-        // If clicking the active card, turn it off and restore the grid to default
         grid.classList.remove('has-active');
     } else {
-        // If clicking a new card, activate it and tell the grid to blur the rest
         card.classList.add('active-service');
         grid.classList.add('has-active');
-        
-        // Optional: slight scroll to center it visually
         setTimeout(() => {
             card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 300);
     }
 }
 
-// Projects Filter
 function filterProjects(category, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
