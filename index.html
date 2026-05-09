@@ -5,71 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robetix — Robotics & Embedded Systems Engineering</title>
     <meta name="description" content="Robetix builds intelligent physical systems — bare-metal firmware to autonomous robots. Expert embedded systems, Edge AI, ROS 2, and drone engineering for clients worldwide.">
+    <meta name="keywords" content="robotics services Pakistan, embedded systems, Edge AI, ROS2, SLAM, autonomous robots, drone development, firmware engineering, PCB design, YOLOv8">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
                     colors: { blue: { 50: '#f0f6ff', 100: '#e0edff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } },
+                    boxShadow: { 'sv-card': '0 20px 50px -10px rgba(0,0,0,0.05)' }
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-        @keyframes float-body   { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-10px)} }
-        @keyframes blink-eye    { 0%,90%,100%{transform:scaleY(1)}  95%{transform:scaleY(0.1)} }
-        @keyframes spin-gear    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-        @keyframes spin-gear-r  { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
-        @keyframes pulse-ring   { 0%,100%{opacity:.15;transform:scale(1)} 50%{opacity:.4;transform:scale(1.12)} }
-        @keyframes dash-orbit   { 0%{stroke-dashoffset:0} 100%{stroke-dashoffset:-220} }
-        @keyframes signal-pulse { 0%,100%{opacity:0} 40%{opacity:1} }
-        @keyframes arm-wave     { 0%,100%{transform:rotate(0deg)} 50%{transform:rotate(-15deg)} }
-        @keyframes glow-ant     { 0%,100%{opacity:1} 50%{opacity:.3} }
-        .robot-body    { animation: float-body 3s ease-in-out infinite; }
-        .eye-l         { animation: blink-eye  4s ease-in-out infinite; transform-origin: 129px 128px; }
-        .eye-r         { animation: blink-eye  4s ease-in-out infinite 0.4s; transform-origin: 201px 128px; }
-        .gear-a        { animation: spin-gear   6s linear infinite; transform-origin: 72px 290px; }
-        .gear-b        { animation: spin-gear-r 4s linear infinite; transform-origin: 258px 290px; }
-        .orbit-ring    { animation: dash-orbit  8s linear infinite; stroke-dasharray: 12 8; }
-        .arm-l         { animation: arm-wave    2.4s ease-in-out infinite; transform-origin: 68px 210px; }
-        .arm-r         { animation: arm-wave    2.4s ease-in-out infinite 1.2s; transform-origin: 262px 210px; transform-box:fill-box; transform:scaleX(-1); }
-        .sig-1         { animation: signal-pulse 2s ease-out infinite 0s; }
-        .sig-2         { animation: signal-pulse 2s ease-out infinite 0.5s; }
-        .sig-3         { animation: signal-pulse 2s ease-out infinite 1s; }
-        .ant-glow      { animation: glow-ant 1.6s ease-in-out infinite; }
-        .pulse-ring-el { animation: pulse-ring 3s ease-in-out infinite; transform-origin: 165px 340px; }
-    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Robetix",
+        "url": "https://robetix.com",
+        "description": "Robotics engineering, embedded systems, Edge AI, and autonomous systems services.",
+        "address": { "@type": "PostalAddress", "addressCountry": "PK" },
+        "sameAs": ["https://www.fiverr.com/shahzamanhaider"]
+    }
+    </script>
 </head>
 <body class="antialiased min-h-screen flex flex-col">
+
     <div class="sv-bg"></div>
 
     <!-- NAVBAR -->
     <header class="fixed top-6 left-0 w-full flex justify-center z-50 px-4">
         <nav class="glass-nav-dark max-w-4xl w-full rounded-full px-4 py-2.5 flex items-center justify-between mx-auto">
             <a href="index.html" class="flex items-center gap-2 pl-2">
-                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-md">
+                <img src="robetix-logo.png" alt="Robetix" class="h-8 w-auto object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="w-8 h-8 rounded-full bg-blue-600 text-white items-center justify-center hidden shadow-[0_0_15px_rgba(59,130,246,0.6)]">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                 </div>
                 <span class="logo-text text-white">Robetix</span>
             </a>
+
             <div class="hidden md:flex items-center gap-1">
-                <a href="index.html" class="nav-link text-white bg-white/10 px-4 py-2 rounded-full text-sm font-semibold">Home</a>
-                <a href="services.html" class="nav-link text-slate-300 px-4 py-2 rounded-full text-sm font-semibold hover:text-white transition-colors">Services</a>
+                <a href="index.html" class="nav-link text-slate-300 px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:text-white">Home</a>
+                <a href="services.html" class="nav-link text-slate-300 px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:text-white">Services</a>
                 <div class="relative nav-group">
-                    <button class="flex items-center gap-1 text-slate-300 text-sm font-semibold hover:text-white py-2 px-3 transition-colors outline-none">Pages <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button>
+                    <button class="flex items-center gap-1 text-slate-300 text-sm font-semibold hover:text-white py-2 px-3 transition-colors outline-none">
+                        Pages <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
                     <div class="nav-submenu absolute top-full left-1/2 -translate-x-1/2 pt-4 w-48 z-50">
                         <div class="bg-slate-900/95 backdrop-blur-xl border border-slate-700 rounded-2xl shadow-xl p-2 flex flex-col gap-1">
                             <a href="projects.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Projects</a>
-                            <a href="about.html"    class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">About Us</a>
-                            <a href="blog.html"     class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Blog</a>
-                            <a href="contact.html"  class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Contact</a>
+                            <a href="about.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">About Us</a>
+                            <a href="blog.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Insights</a>
+                            <a href="contact.html" class="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl transition-colors">Contact</a>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="flex items-center">
                 <a href="contact.html" class="hidden md:block btn-modern bg-blue-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-md">Get a Quote</a>
                 <button class="md:hidden text-white p-2" onclick="toggleMobileMenu()">
@@ -84,32 +81,32 @@
         <button class="absolute top-8 right-8 p-2 text-white" onclick="toggleMobileMenu()">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
-        <div class="flex flex-col gap-6 text-2xl font-bold text-slate-400 text-center">
-            <a href="index.html"    class="text-white">Home</a>
+        <div class="flex flex-col gap-6 text-2xl font-heading font-extrabold text-slate-400 text-center">
+            <a href="index.html" class="text-white">Home</a>
             <a href="services.html" class="hover:text-white transition-colors">Services</a>
             <a href="projects.html" class="hover:text-white transition-colors">Projects</a>
-            <a href="about.html"    class="hover:text-white transition-colors">About</a>
-            <a href="blog.html"     class="hover:text-white transition-colors">Blog</a>
-            <a href="contact.html"  class="hover:text-white transition-colors">Contact</a>
+            <a href="about.html" class="hover:text-white transition-colors">About</a>
+            <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
         </div>
     </div>
 
-    <main class="flex-grow">
+    <main class="flex-grow pt-40 pb-20">
 
-        <!-- HERO + TECH STRIP (one block, no gap between) -->
-        <section class="max-w-6xl mx-auto px-6 pt-44 pb-0">
-            <div class="text-center pb-16">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-8">
-                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse inline-block"></span>
-                    Available for International Projects
-                </div>
-                <h1 class="text-blur-in text-5xl md:text-[5.5rem] font-heading font-black tracking-tight mb-7 text-slate-900 leading-[1.05]">We Build Machines<br>That Think &amp; Act</h1>
-                <p class="text-blur-in text-slate-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium" style="animation-delay:0.2s;">Engineering intelligent physical machines under real hardware constraints, built for field deployment worldwide.</p>
+        <!-- HERO -->
+        <section class="max-w-6xl mx-auto px-6 half-scroll py-24">
+            <div class="text-center">
+                <h1 class="text-blur-in text-6xl md:text-[6.5rem] font-heading font-black tracking-tight mb-8 text-slate-900 leading-[1.05]">
+                    We Build Machines<br>That Think & Act
+                </h1>
+                <p class="text-blur-in text-slate-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium" style="animation-delay:0.2s;">
+                    Engineering intelligent physical machines under real hardware constraints, built for field deployment worldwide.
+                </p>
                 <div class="text-blur-in flex flex-col sm:flex-row items-center justify-center gap-4 mb-12" style="animation-delay:0.4s;">
                     <a href="contact.html" class="btn-modern bg-blue-600 text-white rounded-full px-8 py-3.5 font-bold text-sm shadow-md">Start a Project</a>
                     <a href="projects.html" class="btn-modern bg-white text-slate-800 border border-slate-200 rounded-full px-8 py-3.5 font-bold text-sm shadow-sm hover:border-slate-300">View Portfolio</a>
                 </div>
-                <div class="text-blur-in flex flex-col items-center gap-3" style="animation-delay:0.6s;">
+
+                <div class="text-blur-in flex flex-col items-center justify-center gap-3" style="animation-delay:0.6s;">
                     <div class="flex -space-x-2">
                         <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://ui-avatars.com/api/?name=M&background=0D8ABC&color=fff" alt="">
                         <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://ui-avatars.com/api/?name=S&background=10B981&color=fff" alt="">
@@ -118,264 +115,370 @@
                         <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-600">35+</div>
                     </div>
                     <div class="flex items-center gap-2">
-                        <div class="flex text-amber-400 text-sm">★★★★★</div>
+                        <div class="flex text-amber-400">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
                         <span class="text-sm font-bold text-slate-700">5.0 Rating on Fiverr</span>
                     </div>
                 </div>
             </div>
-            <!-- Tech strip — zero gap from hero -->
-            <div class="border-t border-b border-slate-200 bg-white/70 backdrop-blur-sm -mx-6 px-6">
-                <div class="fade-up flex flex-wrap justify-center items-center gap-x-10 gap-y-4 py-5 opacity-60">
-                    <div class="flex items-center gap-2 font-bold text-slate-600 text-sm"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>Embedded C/C++</div>
-                    <div class="flex items-center gap-2 font-bold text-slate-600 text-sm"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>Edge AI Vision</div>
-                    <div class="flex items-center gap-2 font-bold text-slate-600 text-sm"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>ROS 2 Systems</div>
-                    <div class="flex items-center gap-2 font-bold text-slate-600 text-sm"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>UAV Architectures</div>
-                    <div class="flex items-center gap-2 font-bold text-slate-600 text-sm"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>PCB Design</div>
-                    <div class="flex items-center gap-2 font-bold text-slate-600 text-sm"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>SLAM &amp; Nav2</div>
-                    <div class="flex items-center gap-2 font-bold text-slate-600 text-sm"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>MAVLink / Pixhawk</div>
+        </section>
+
+        <!-- TECH STRIP -->
+        <section class="max-w-6xl mx-auto px-6 py-16 half-scroll">
+            <div class="fade-up flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    Embedded C/C++
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                    Edge AI Vision
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                    ROS 2 Systems
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    UAV Architectures
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
+                    PCB Design
+                </div>
+                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                    SLAM & Nav2
                 </div>
             </div>
         </section>
 
-        <!-- STATS -->
-        <section class="max-w-6xl mx-auto px-6 py-28" id="stats-section">
-            <div class="fade-up">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-                    <div>
-                        <p class="text-[11px] font-black uppercase tracking-[0.25em] text-blue-600 mb-3">By the numbers</p>
-                        <h2 class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.05] tracking-tight">Empowering Engineers<br><span class="text-slate-300">&amp; Builders.</span></h2>
-                    </div>
-                    <p class="text-slate-500 font-medium text-base max-w-xs leading-relaxed md:text-right">Real hardware. Real clients.<br>Every number earned in the field.</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-0 border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm">
-                    <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 group hover:bg-blue-600 transition-colors duration-300">
-                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Projects Delivered</div>
-                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size:clamp(3rem,5vw,4.5rem);"><span class="counter" data-target="35">0</span><span class="text-blue-600 group-hover:text-blue-200 transition-colors">+</span></div>
-                    </div>
-                    <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 group hover:bg-slate-900 transition-colors duration-300">
-                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Intl. Clients</div>
-                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size:clamp(3rem,5vw,4.5rem);"><span class="counter" data-target="12">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">+</span></div>
-                    </div>
-                    <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 border-t md:border-t-0 group hover:bg-blue-600 transition-colors duration-300">
-                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Core Technologies</div>
-                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size:clamp(3rem,5vw,4.5rem);"><span class="counter" data-target="7">0</span></div>
-                    </div>
-                    <div class="flex flex-col justify-between p-8 md:p-10 border-t md:border-t-0 group hover:bg-slate-900 transition-colors duration-300">
-                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Satisfaction Rate</div>
-                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size:clamp(3rem,5vw,4.5rem);"><span class="counter" data-target="100">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">%</span></div>
-                    </div>
-                </div>
-                <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
-                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div><span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Available for new projects</span></div>
-                    <a href="contact.html" class="text-xs font-black text-blue-600 uppercase tracking-widest hover:text-slate-900 transition-colors">Start a conversation &rarr;</a>
+        <!-- STATS — Editorial grid, no generic white card -->
+       <section class="max-w-6xl mx-auto px-6 py-32 half-scroll" id="stats-section">
+    <div class="fade-up">
+ 
+        <!-- Editorial header row -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+                <p class="text-[11px] font-black uppercase tracking-[0.25em] text-blue-600 mb-3">By the numbers</p>
+                <h2 class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.05] tracking-tight">
+                    Empowering Engineers<br>
+                    <span class="text-slate-300">&amp; Builders.</span>
+                </h2>
+            </div>
+            <p class="text-slate-500 font-medium text-base max-w-xs leading-relaxed md:text-right">
+                Real hardware. Real clients.<br>Every number earned in the field.
+            </p>
+        </div>
+ 
+        <!-- Stats row — bold editorial, no card box -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-0 border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm">
+ 
+            <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 group hover:bg-blue-600 transition-colors duration-300">
+                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Projects Delivered</div>
+                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                    <span class="counter" data-target="35">0</span><span class="text-blue-600 group-hover:text-blue-200 transition-colors">+</span>
                 </div>
             </div>
-        </section>
+ 
+            <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 group hover:bg-slate-900 transition-colors duration-300 md:border-r">
+                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Intl. Clients</div>
+                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                    <span class="counter" data-target="12">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">+</span>
+                </div>
+            </div>
+ 
+            <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 border-t md:border-t-0 group hover:bg-blue-600 transition-colors duration-300">
+                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Core Technologies</div>
+                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                    <span class="counter" data-target="7">0</span>
+                </div>
+            </div>
+ 
+            <div class="flex flex-col justify-between p-8 md:p-10 border-t md:border-t-0 group hover:bg-slate-900 transition-colors duration-300">
+                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Satisfaction Rate</div>
+                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                    <span class="counter" data-target="100">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">%</span>
+                </div>
+            </div>
+ 
+        </div>
+ 
+        <!-- Bottom detail strip -->
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Available for new projects</span>
+            </div>
+            <a href="contact.html" class="text-xs font-black text-blue-600 uppercase tracking-widest hover:text-slate-900 transition-colors">
+                Start a conversation &rarr;
+            </a>
+        </div>
+ 
+    </div>
+</section>
 
-        <!-- WHY ROBETIX + ROBOT SVG -->
-        <section class="max-w-6xl mx-auto px-6 py-24">
+        <!-- WHY ROBETIX -->
+        <section class="max-w-6xl mx-auto px-6 py-24 half-scroll">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="fade-up">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">Why Robetix</div>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+                        Why Robetix
+                    </div>
                     <h2 class="text-4xl md:text-5xl font-heading font-black mb-6 tracking-tight text-slate-900 leading-[1.1]">Built Different.<br>Deployed Real.</h2>
                     <p class="text-slate-500 mb-10 text-lg leading-relaxed font-medium">We don't just simulate. Every system is designed to survive contact with reality — real sensors, real noise, real constraints.</p>
                     <div class="space-y-8">
                         <div class="flex gap-4">
                             <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">1</div>
-                            <div><h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">Hardware-First Engineering</h4><p class="text-sm text-slate-500 font-medium leading-relaxed">Every abstraction is earned through deep hardware understanding. We write code that runs on silicon, not just in notebooks.</p></div>
+                            <div>
+                                <h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">Hardware-First Engineering</h4>
+                                <p class="text-sm text-slate-500 font-medium leading-relaxed">Every abstraction is earned through deep hardware understanding. We write code that runs on silicon, not just in notebooks.</p>
+                            </div>
                         </div>
                         <div class="flex gap-4">
                             <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">2</div>
-                            <div><h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">End-to-End Ownership</h4><p class="text-sm text-slate-500 font-medium leading-relaxed">From PCB layout to ROS nodes — we handle the full stack so your team doesn't coordinate between 5 vendors.</p></div>
+                            <div>
+                                <h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">End-to-End Ownership</h4>
+                                <p class="text-sm text-slate-500 font-medium leading-relaxed">From PCB layout to ROS nodes — we handle the full stack so your team doesn't coordinate between 5 vendors.</p>
+                            </div>
                         </div>
                         <div class="flex gap-4">
                             <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                            <div><h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">Research-Backed Execution</h4><p class="text-sm text-slate-500 font-medium leading-relaxed">Published in peer-reviewed conferences. Research intern at NCAI NUST. Academic rigor, commercial timelines.</p></div>
+                            <div>
+                                <h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">Research-Backed Execution</h4>
+                                <p class="text-sm text-slate-500 font-medium leading-relaxed">Published in peer-reviewed conferences. Research intern at NCAI NUST. Academic rigor, commercial timelines.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- CUSTOM ANIMATED ROBOT -->
-                <div class="fade-up delay-100 flex items-center justify-center select-none">
-                    <svg viewBox="0 0 330 430" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-sm" aria-label="Animated robot">
-                        <defs>
-                            <linearGradient id="bG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/></linearGradient>
-                            <linearGradient id="hG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#bfdbfe"/></linearGradient>
-                            <linearGradient id="sG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
-                            <filter id="gf"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-                        </defs>
-
-                        <!-- shadow -->
-                        <ellipse cx="165" cy="345" rx="72" ry="11" fill="#94a3b8" opacity="0.25"/>
-                        <!-- pulse ring -->
-                        <ellipse class="pulse-ring-el" cx="165" cy="345" rx="100" ry="17" fill="none" stroke="#bfdbfe" stroke-width="1.5"/>
-
-                        <!-- orbit around head -->
-                        <ellipse class="orbit-ring" cx="165" cy="148" rx="92" ry="26" fill="none" stroke="#93c5fd" stroke-width="1" opacity="0.55"/>
-
-                        <!-- ROBOT (floats) -->
-                        <g class="robot-body">
-                            <!-- LEFT ARM -->
-                            <g class="arm-l">
-                                <rect x="52" y="200" width="22" height="55" rx="11" fill="url(#bG)" stroke="#93c5fd" stroke-width="1.5"/>
-                                <circle cx="63" cy="262" r="10" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                            </g>
-                            <!-- RIGHT ARM -->
-                            <g class="arm-r">
-                                <rect x="256" y="200" width="22" height="55" rx="11" fill="url(#bG)" stroke="#93c5fd" stroke-width="1.5"/>
-                                <circle cx="267" cy="262" r="10" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                            </g>
-                            <!-- BODY -->
-                            <rect x="88" y="194" width="154" height="118" rx="22" fill="url(#bG)" stroke="#93c5fd" stroke-width="2"/>
-                            <!-- body screen -->
-                            <rect x="106" y="212" width="118" height="72" rx="10" fill="url(#sG)"/>
-                            <rect x="116" y="223" width="55" height="4" rx="2" fill="#60a5fa" opacity=".85"/>
-                            <rect x="116" y="233" width="40" height="4" rx="2" fill="#93c5fd" opacity=".5"/>
-                            <rect x="116" y="243" width="68" height="4" rx="2" fill="#93c5fd" opacity=".45"/>
-                            <rect x="116" y="256" width="28" height="8" rx="3" fill="#3b82f6"/>
-                            <rect x="150" y="256" width="48" height="8" rx="3" fill="#1e3a8a" opacity=".55"/>
-                            <!-- blinking cursor -->
-                            <rect x="186" y="223" width="2" height="10" rx="1" fill="#60a5fa"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
-                            <!-- bolts -->
-                            <circle cx="104" cy="298" r="5" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                            <circle cx="226" cy="298" r="5" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                            <!-- NECK -->
-                            <rect x="148" y="172" width="34" height="24" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
-                            <!-- HEAD -->
-                            <rect x="86" y="90" width="158" height="86" rx="26" fill="url(#hG)" stroke="#93c5fd" stroke-width="2"/>
-                            <!-- antenna -->
-                            <line x1="165" y1="90" x2="165" y2="65" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round"/>
-                            <circle class="ant-glow" cx="165" cy="58" r="8" fill="#3b82f6" filter="url(#gf)"/>
-                            <!-- LEFT EYE -->
-                            <g class="eye-l">
-                                <rect x="108" y="113" width="36" height="28" rx="9" fill="url(#sG)"/>
-                                <circle cx="126" cy="127" r="9" fill="#60a5fa" opacity=".9"/>
-                                <circle cx="130" cy="123" r="3.5" fill="white" opacity=".7"/>
-                            </g>
-                            <!-- RIGHT EYE -->
-                            <g class="eye-r">
-                                <rect x="186" y="113" width="36" height="28" rx="9" fill="url(#sG)"/>
-                                <circle cx="204" cy="127" r="9" fill="#60a5fa" opacity=".9"/>
-                                <circle cx="208" cy="123" r="3.5" fill="white" opacity=".7"/>
-                            </g>
-                            <!-- mouth grille -->
-                            <rect x="130" y="152" width="70" height="14" rx="7" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
-                            <line x1="142" y1="159" x2="142" y2="159" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
-                            <line x1="150" y1="157" x2="150" y2="161" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
-                            <line x1="158" y1="155" x2="158" y2="163" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
-                            <line x1="166" y1="155" x2="166" y2="163" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
-                            <line x1="174" y1="157" x2="174" y2="161" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
-                            <line x1="182" y1="159" x2="182" y2="159" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
-                            <!-- LEGS -->
-                            <rect x="118" y="308" width="38" height="38" rx="10" fill="url(#bG)" stroke="#93c5fd" stroke-width="1.5"/>
-                            <rect x="174" y="308" width="38" height="38" rx="10" fill="url(#bG)" stroke="#93c5fd" stroke-width="1.5"/>
-                            <rect x="112" y="336" width="48" height="14" rx="7" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                            <rect x="170" y="336" width="48" height="14" rx="7" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                        </g>
-
-                        <!-- GEARS (outside float group so they spin in place) -->
-                        <g class="gear-a" opacity="0.45">
-                            <circle cx="72" cy="290" r="17" fill="none" stroke="#93c5fd" stroke-width="2.5"/>
-                            <circle cx="72" cy="290" r="6"  fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                            <line x1="72" y1="270" x2="72" y2="262" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="72" y1="310" x2="72" y2="318" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="52"  y1="290" x2="44"  y2="290" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="92"  y1="290" x2="100" y2="290" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="58"  y1="276" x2="53"  y2="271" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="86"  y1="304" x2="91"  y2="309" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="86"  y1="276" x2="91"  y2="271" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="58"  y1="304" x2="53"  y2="309" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                        </g>
-                        <g class="gear-b" opacity="0.45">
-                            <circle cx="258" cy="290" r="17" fill="none" stroke="#93c5fd" stroke-width="2.5"/>
-                            <circle cx="258" cy="290" r="6"  fill="#bfdbfe" stroke="#93c5fd" stroke-width="1.5"/>
-                            <line x1="258" y1="270" x2="258" y2="262" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="258" y1="310" x2="258" y2="318" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="238" y1="290" x2="230" y2="290" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="278" y1="290" x2="286" y2="290" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="244" y1="276" x2="239" y2="271" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="272" y1="304" x2="277" y2="309" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="272" y1="276" x2="277" y2="271" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="244" y1="304" x2="239" y2="309" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
-                        </g>
-
-                        <!-- WiFi signal arcs (top-right) -->
-                        <g transform="translate(240,72)">
-                            <path class="sig-1" d="M0 18 A22 22 0 0 1 22 18" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" opacity="0"/>
-                            <path class="sig-2" d="M-8 10 A32 32 0 0 1 30 10" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" opacity="0"/>
-                            <path class="sig-3" d="M-16 2 A42 42 0 0 1 38 2" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" opacity="0"/>
-                            <circle cx="11" cy="24" r="3" fill="#3b82f6"/>
-                        </g>
-                    </svg>
+                <div class="fade-up delay-100 relative h-[450px] flex items-center justify-center overflow-visible">
+                    <div class="w-full h-full relative z-10 flex items-center justify-center">
+                        <dotlottie-player src="https://lottie.host/58c0e6b2-9856-4a3c-9b9a-a8de8cda9b23/7C5j9IWHTQ.lottie" background="transparent" speed="1" style="width:130%;height:130%;" loop autoplay></dotlottie-player>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- SELECTED PROJECTS -->
-        <section class="max-w-6xl mx-auto px-6 py-24">
+        <section class="max-w-6xl mx-auto px-6 py-24 half-scroll">
             <div class="flex justify-between items-end mb-10 fade-up">
-                <div><h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-2">Selected Projects</h2><p class="text-slate-500 font-medium text-lg">Hardware deployed in the field.</p></div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-2">Selected Projects</h2>
+                    <p class="text-slate-500 font-medium text-lg">Hardware deployed in the field.</p>
+                </div>
                 <a href="projects.html" class="text-blue-600 font-bold text-sm hover:underline hidden sm:block">View All &rarr;</a>
             </div>
+
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="fade-up bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="location.href='projects.html'">
-                    <div class="h-52 bg-gradient-to-br from-blue-900 to-blue-600 flex items-center justify-center"><svg class="w-16 h-16 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg></div>
-                    <div class="p-8"><div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">UAV / Edge AI</div><h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">SAR Hexacopter GCS</h3><p class="text-sm text-slate-500 font-medium leading-relaxed">Browser-based offline GCS. YOLOv8 Nano detection, automated search sweeps, payload drops.</p></div>
+                <div class="project-wrap fade-up bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <img src="project4-gcs.jpg" alt="SAR Hexacopter GCS" class="w-full h-full object-cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="hidden w-full h-full bg-gradient-to-br from-blue-900 to-blue-600 items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">UAV / Edge AI</div>
+                        <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">SAR Hexacopter GCS</h3>
+                        <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">Browser-based offline GCS. YOLOv8 Nano detection, automated search sweeps, payload drops.</p>
+                    </div>
                 </div>
-                <div class="fade-up delay-100 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="location.href='projects.html'">
-                    <div class="h-52 bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center"><svg class="w-16 h-16 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></div>
-                    <div class="p-8"><div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Aerospace / UAV</div><h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">APM 2.8 Quadcopter</h3><p class="text-sm text-slate-500 font-medium leading-relaxed">Return to launch, failsafe logic, and 12-mode guided missions for delivery and photography.</p></div>
+
+                <div class="project-wrap fade-up delay-100 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <img src="project1-quadcopter.jpg" alt="APM Quadcopter" class="w-full h-full object-cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="hidden w-full h-full bg-gradient-to-br from-slate-800 to-slate-600 items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Aerospace / UAV</div>
+                        <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">APM 2.8 Quadcopter</h3>
+                        <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">Return to launch, failsafe logic, and 12-mode guided missions for delivery and photography.</p>
+                    </div>
                 </div>
-                <div class="fade-up delay-200 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="location.href='projects.html'">
-                    <div class="h-52 bg-gradient-to-br from-emerald-800 to-emerald-600 flex items-center justify-center"><svg class="w-16 h-16 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></div>
-                    <div class="p-8"><div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Robotics / Vision</div><h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">Face Tracking Robot</h3><p class="text-sm text-slate-500 font-medium leading-relaxed">ESP32 CAM live streaming, OpenCV/MediaPipe pipeline controlling motors serially.</p></div>
+
+                <div class="project-wrap fade-up delay-200 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <img src="project3-face-tracking.jpg" alt="Face Tracking Robot" class="w-full h-full object-cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="hidden w-full h-full bg-gradient-to-br from-emerald-800 to-emerald-600 items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Robotics / Vision</div>
+                        <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">Face Tracking Robot</h3>
+                        <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">ESP32 CAM live streaming, OpenCV/MediaPipe pipeline controlling motors serially.</p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-10 sm:hidden fade-up">
+                <a href="projects.html" class="btn-modern bg-white border border-slate-200 text-slate-700 font-bold text-sm px-8 py-3 rounded-full shadow-sm">View All Projects &rarr;</a>
             </div>
         </section>
 
         <!-- TESTIMONIALS MARQUEE -->
-        <section class="py-24 overflow-hidden bg-slate-50 border-y border-slate-200">
+        <section class="py-24 half-scroll overflow-hidden">
             <div class="max-w-6xl mx-auto px-6 text-center mb-16 fade-up">
                 <h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-4">Client Success</h2>
                 <p class="text-slate-500 font-medium text-lg">Trusted globally by researchers, startups, and engineers.</p>
             </div>
+
             <div class="marquee-container py-4 fade-up">
                 <div class="marquee-content gap-6 px-4">
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0"><div><div class="text-amber-400 mb-3 text-sm">★★★★★</div><div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div><p class="text-slate-700 text-sm font-semibold leading-relaxed">"The best person I have ever worked with... accurate in delivery, he fixed my mistakes. I recommend him 100/100."</p></div><div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5"><div class="w-9 h-9 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold shrink-0">M</div><div><h4 class="text-sm font-bold text-slate-900">Menweralhadedit</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Germany</p></div></div></div>
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0"><div><div class="text-amber-400 mb-3 text-sm">★★★★★</div><div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">IoT Integration</div><p class="text-slate-700 text-sm font-semibold leading-relaxed">"A good developer who listens to everything I mention and gives suggestions on how to make functionality better."</p></div><div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5"><div class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold shrink-0">O</div><div><h4 class="text-sm font-bold text-slate-900">Oula Oussi</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UAE</p></div></div></div>
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0"><div><div class="text-amber-400 mb-3 text-sm">★★★★★</div><div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Firmware Dev</div><p class="text-slate-700 text-sm font-semibold leading-relaxed">"Really nice guy! He understood what I needed and helped me. He answers fast. Highly recommend."</p></div><div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5"><div class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-bold shrink-0">J</div><div><h4 class="text-sm font-bold text-slate-900">Jhonnybzh</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">France</p></div></div></div>
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0"><div><div class="text-amber-400 mb-3 text-sm">★★★★☆</div><div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">PCB Design</div><p class="text-slate-700 text-sm font-semibold leading-relaxed">"Nice guy, great work on the PCB layout. Want to do more projects with him."</p></div><div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5"><div class="w-9 h-9 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold shrink-0">M</div><div><h4 class="text-sm font-bold text-slate-900">Mark Anto</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UK</p></div></div></div>
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0"><div><div class="text-amber-400 mb-3 text-sm">★★★★★</div><div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div><p class="text-slate-700 text-sm font-semibold leading-relaxed">"Thanks so much, my code works well now. He successfully solved my issue on the first try."</p></div><div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5"><div class="w-9 h-9 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold shrink-0">S</div><div><h4 class="text-sm font-bold text-slate-900">Sarah Councell</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Thailand</p></div></div></div>
+
+                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"The best person I have ever worked with... accurate in delivery, he fixed my mistakes. I recommend him 100/100."</p>
+                        </div>
+                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
+                            <div class="w-9 h-9 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold shrink-0">M</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Menweralhadedit</h4>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Germany</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">IoT Integration</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"A good developer who listens to everything I mention and gives suggestions on how to make functionality better."</p>
+                        </div>
+                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
+                            <div class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold shrink-0">O</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Oula Oussi</h4>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UAE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Firmware Dev</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Really nice guy! He understood what I needed and helped me. He answers fast. Highly recommend."</p>
+                        </div>
+                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
+                            <div class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-bold shrink-0">J</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Jhonnybzh</h4>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">France</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★☆</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">PCB Design</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Nice guy, great work on the PCB layout. Want to do more projects with him."</p>
+                        </div>
+                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
+                            <div class="w-9 h-9 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold shrink-0">M</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Mark Anto</h4>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UK</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Thanks so much, my code works well now. He successfully solved my issue on the first try."</p>
+                        </div>
+                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
+                            <div class="w-9 h-9 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold shrink-0">S</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Sarah Councell</h4>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Thailand</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="max-w-6xl mx-auto px-6 py-20">
+        <!-- CTA STRIP -->
+        <section class="max-w-6xl mx-auto px-6 py-16 half-scroll">
             <div class="fade-up bg-slate-900 rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                <!-- subtle background detail -->
                 <div class="absolute inset-0 opacity-5" style="background-image:linear-gradient(to right,#fff 1px,transparent 1px),linear-gradient(to bottom,#fff 1px,transparent 1px);background-size:40px 40px;"></div>
-                <div class="relative z-10"><h2 class="text-3xl md:text-4xl font-heading font-black text-white tracking-tight mb-3">From Idea to Autonomous System.</h2><p class="text-slate-400 font-medium text-lg">Tell us what you're building. We'll tell you how to make it work.</p></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-heading font-black text-white tracking-tight mb-3">From Idea to Autonomous System.</h2>
+                    <p class="text-slate-400 font-medium text-lg">Tell us what you're building. We'll tell you how to make it work.</p>
+                </div>
                 <div class="flex flex-col sm:flex-row gap-4 shrink-0 relative z-10">
                     <a href="contact.html" class="btn-modern bg-blue-600 text-white font-bold px-8 py-3.5 rounded-full text-sm shadow-md text-center">Start a Conversation</a>
                     <a href="services.html" class="btn-modern bg-white/10 text-white border border-white/20 font-bold px-8 py-3.5 rounded-full text-sm text-center hover:bg-white/20 transition-colors">Our Services</a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 mt-4">
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 mt-10 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
                 <div class="md:col-span-4">
-                    <div class="flex items-center gap-2 mb-6"><div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><span class="logo-text text-slate-900 text-lg font-bold">Robetix</span></div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="robetix-logo.png" alt="Robetix" class="h-8 w-auto object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 text-white hidden items-center justify-center">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <span class="logo-text text-slate-900">Robetix</span>
+                    </div>
                     <p class="text-sm text-slate-500 leading-relaxed font-medium max-w-sm mb-6">Engineering intelligent physical systems. Embedded firmware, Edge AI, autonomous robots, and custom electronics — deployed in the real world.</p>
-                    <a href="mailto:sz@robetix.com" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>sz@robetix.com</a>
+                    <a href="mailto:sz@robetix.com" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        sz@robetix.com
+                    </a>
                 </div>
                 <div class="hidden md:block md:col-span-2"></div>
-                <div class="md:col-span-2"><h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Services</h4><ul class="space-y-4 text-sm text-slate-500 font-medium"><li><a href="services.html" class="hover:text-blue-600 transition-colors">ROS 2 &amp; Robotics</a></li><li><a href="services.html" class="hover:text-blue-600 transition-colors">PCB Design</a></li><li><a href="services.html" class="hover:text-blue-600 transition-colors">Embedded Systems</a></li><li><a href="services.html" class="hover:text-blue-600 transition-colors">UAV Systems</a></li><li><a href="services.html" class="hover:text-blue-600 transition-colors">Edge AI</a></li></ul></div>
-                <div class="md:col-span-2"><h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Company</h4><ul class="space-y-4 text-sm text-slate-500 font-medium"><li><a href="about.html" class="hover:text-blue-600 transition-colors">About</a></li><li><a href="projects.html" class="hover:text-blue-600 transition-colors">Portfolio</a></li><li><a href="blog.html" class="hover:text-blue-600 transition-colors">Blog</a></li><li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a></li></ul></div>
-                <div class="md:col-span-2"><h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Contact</h4><ul class="space-y-4 text-sm text-slate-500 font-medium"><li><a href="mailto:sz@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li><li><a href="https://www.fiverr.com/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">Fiverr</a></li><li><a href="https://linkedin.com/in/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a></li></ul></div>
+                <div class="md:col-span-2">
+                    <h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Services</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 font-medium">
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">ROS 2 & Robotics</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">PCB Design</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">CAD Designs</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">Embedded Systems</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">UAV Systems</a></li>
+                        <li><a href="services.html" class="hover:text-blue-600 transition-colors">Edge AI</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Company</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 font-medium">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About</a></li>
+                        <li><a href="projects.html" class="hover:text-blue-600 transition-colors">Portfolio</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-600 transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Contact</h4>
+                    <ul class="space-y-4 text-sm text-slate-500 font-medium">
+                        <li><a href="mailto:sz@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
+                        <li><a href="https://www.fiverr.com/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">Fiverr</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Upwork</a></li>
+                        <li><a href="https://linkedin.com/in/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="border-t border-slate-200 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p class="text-sm font-medium text-slate-400">© 2026 Robetix. Registered under IPO Pakistan.</p>
@@ -385,15 +488,5 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        const mc = document.querySelector('.marquee-content');
-        if (mc) mc.parentElement.appendChild(mc.cloneNode(true));
-        const obs = new IntersectionObserver(e => { e.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-        let fired = false;
-        const sObs = new IntersectionObserver(e => { if (e[0].isIntersecting && !fired) { fired = true; document.querySelectorAll('.counter').forEach(c => { const t = +c.dataset.target, s = performance.now(); const tick = n => { const p = Math.min((n-s)/1800,1), ease = 1-Math.pow(1-p,4); c.textContent = Math.floor(ease*t); if (p<1) requestAnimationFrame(tick); else c.textContent=t; }; requestAnimationFrame(tick); }); } }, { threshold: 0.3 });
-        const ss = document.getElementById('stats-section'); if (ss) sObs.observe(ss);
-        function toggleMobileMenu() { const m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); m.classList.toggle('flex'); document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden'; }
-    </script>
 </body>
 </html>
