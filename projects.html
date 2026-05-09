@@ -43,7 +43,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="flex items-center">
                 <a href="contact.html" class="hidden md:block btn-modern bg-blue-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-md">Get a Quote</a>
                 <button class="md:hidden text-white p-2" onclick="toggleMobileMenu()">
@@ -66,61 +65,61 @@
         </div>
     </div>
 
-    <main class="flex-grow pt-40 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center mb-16 fade-up">
+    <main class="flex-grow pt-40 pb-32 px-6 half-scroll">
+        <div class="max-w-4xl mx-auto text-center mb-12 fade-up">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-xs uppercase tracking-widest mb-6 shadow-sm">Portfolio</div>
-            <h1 class="text-5xl md:text-6xl font-heading font-black tracking-tight mb-6 text-slate-900 leading-[1.1]">Things We've Built</h1>
+            <h1 class="text-5xl md:text-6xl font-heading font-black tracking-tight mb-6 text-slate-900">Things We've Built</h1>
             <p class="text-slate-500 text-lg font-medium">Real systems. Real hardware. Shipped to real clients.</p>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-3 mb-20 fade-up delay-100">
-            <button class="filter-btn bg-blue-600 text-white border-blue-600 px-6 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('all', this)">All Projects</button>
-            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-6 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('uav', this)">UAV / Drones</button>
-            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-6 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('ros', this)">ROS 2 / SLAM</button>
-            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-6 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('ai', this)">Edge AI</button>
-            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-6 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('embedded', this)">Embedded & PCB</button>
+        <div class="flex flex-wrap justify-center gap-3 mb-16 fade-up delay-100">
+            <button class="filter-btn bg-blue-600 text-white border-blue-600 px-5 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('all', this)">All Projects</button>
+            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-5 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('uav', this)">UAV / Drones</button>
+            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-5 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('ros', this)">ROS 2 / SLAM</button>
+            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-5 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('ai', this)">Edge AI</button>
+            <button class="filter-btn bg-white text-slate-500 border border-slate-200 hover:text-slate-900 px-5 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors" onclick="filterProjects('embedded', this)">Embedded & PCB</button>
         </div>
 
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div class="project-wrap fade-up bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="uav">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="project-wrap fade-up bg-white rounded-[2.5rem] border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="uav">
                 <div class="h-64 bg-slate-100 relative overflow-hidden">
                     <img src="project4-gcs.jpg" alt="SAR Hexacopter GCS" class="w-full h-full object-cover">
                 </div>
                 <div class="p-8">
-                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">UAV / ROS 2</div>
+                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-2">UAV / ROS 2</div>
                     <h3 class="font-heading font-extrabold text-2xl mb-4 text-slate-900">SAR Hexacopter Custom GCS</h3>
                     <p class="text-sm text-slate-500 mb-6 font-medium leading-relaxed">A browser-based offline ground control station for autonomous search and rescue. One-click complex missions, live YOLOv8 Nano detection streamed directly from a Pi payload, and automated search sweeps.</p>
                 </div>
             </div>
 
-            <div class="project-wrap fade-up delay-100 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="uav">
+            <div class="project-wrap fade-up delay-100 bg-white rounded-[2.5rem] border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="uav">
                 <div class="h-64 bg-slate-100 relative overflow-hidden">
                     <img src="project1-quadcopter.jpg" alt="APM Quadcopter" class="w-full h-full object-cover">
                 </div>
                 <div class="p-8">
-                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Aerospace / UAV</div>
+                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-2">Aerospace / UAV</div>
                     <h3 class="font-heading font-extrabold text-2xl mb-4 text-slate-900">APM 2.8 Quadcopter</h3>
                     <p class="text-sm text-slate-500 mb-6 font-medium leading-relaxed">Programmable quadcopter featuring Return to Launch, Failsafe logic, and 12-mode guided missions for photography and autonomous delivery using Mission Planner.</p>
                 </div>
             </div>
 
-            <div class="project-wrap fade-up delay-200 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="embedded">
+            <div class="project-wrap fade-up bg-white rounded-[2.5rem] border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="embedded">
                 <div class="h-64 bg-slate-100 relative overflow-hidden">
                     <img src="project2-plant.jpg" alt="Plant Monitoring System" class="w-full h-full object-cover">
                 </div>
                 <div class="p-8">
-                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Embedded / IoT</div>
+                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-2">Embedded / IoT</div>
                     <h3 class="font-heading font-extrabold text-2xl mb-4 text-slate-900">Plant Monitoring System</h3>
                     <p class="text-sm text-slate-500 mb-6 font-medium leading-relaxed">ESP32 CAM & WROVER-based IoT system. Webserver integration to monitor plants, toggle experimental lighting via custom PCB, and push image logs to Firebase.</p>
                 </div>
             </div>
 
-            <div class="project-wrap fade-up bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="ai">
+            <div class="project-wrap fade-up delay-100 bg-white rounded-[2.5rem] border border-slate-200 shadow-sm overflow-hidden card-hover" data-cat="ai">
                 <div class="h-64 bg-slate-100 relative overflow-hidden">
                     <img src="project3-face-tracking.jpg" alt="Face Tracking Robot" class="w-full h-full object-cover">
                 </div>
                 <div class="p-8">
-                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Edge AI / Robotics</div>
+                    <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-2">Edge AI / Robotics</div>
                     <h3 class="font-heading font-extrabold text-2xl mb-4 text-slate-900">Face Tracking Robot</h3>
                     <p class="text-sm text-slate-500 mb-6 font-medium leading-relaxed">ESP32 CAM live streaming to a PC processing pipeline using OpenCV and MediaPipe. The PC calculates distance and sends serial commands to an ESP32 WROVER to drive motors.</p>
                 </div>
@@ -128,7 +127,7 @@
         </div>
     </main>
 
-    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 mt-32 relative z-10">
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
                 <div class="md:col-span-4">
@@ -166,7 +165,7 @@
                 <div class="md:col-span-2">
                     <h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Contact</h4>
                     <ul class="space-y-4 text-sm text-slate-500 font-medium">
-                        <li><a href="mailto:hello@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
+                        <li><a href="mailto:sz@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
                         <li><a href="https://www.fiverr.com/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">Fiverr</a></li>
                     </ul>
                 </div>
