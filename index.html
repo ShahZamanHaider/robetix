@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
     <script>
-        tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }, colors: { blue: { 50: '#f0f6ff', 100: '#e0edff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } } } } }
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }, colors: { blue: { 50: '#f0f6ff', 100: '#e0edff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' } }, boxShadow: { 'sv-card': '0 20px 50px -10px rgba(0,0,0,0.05)' } } } }
     </script>
     <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -20,7 +20,7 @@
         <nav class="glass-nav-dark max-w-4xl w-full rounded-full px-4 py-2.5 flex items-center justify-between mx-auto">
             <a href="index.html" class="flex items-center gap-2 pl-2">
                 <img src="robetix-logo.png" alt="Robetix Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.6)] hidden">
+                <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center hidden shadow-[0_0_15px_rgba(59,130,246,0.6)]">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
                 <span class="logo-text text-white">Robetix</span>
@@ -69,60 +69,89 @@
 
     <main class="flex-grow pt-40 pb-20">
         
-        <section class="max-w-6xl mx-auto px-6">
-            <div class="text-center pb-16 pt-10">
-                <h1 class="text-blur-in text-6xl md:text-[6rem] font-heading font-black tracking-tight mb-8 text-slate-900 leading-[1.05]">
+        <section class="max-w-6xl mx-auto px-6 half-scroll py-24">
+            <div class="text-center">
+                <h1 class="text-blur-in text-6xl md:text-[6.5rem] font-heading font-black tracking-tight mb-8 text-slate-900 leading-[1.05]">
                     We Build Machines <br> That Think & Act
                 </h1>
                 <p class="text-blur-in text-slate-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium" style="animation-delay: 0.2s;">
                     Engineering intelligent physical machines under real hardware constraints, built for field deployment.
                 </p>
-                <div class="text-blur-in flex flex-col sm:flex-row items-center justify-center gap-4" style="animation-delay: 0.4s;">
+                <div class="text-blur-in flex flex-col sm:flex-row items-center justify-center gap-4 mb-12" style="animation-delay: 0.4s;">
                     <a href="contact.html" class="btn-modern bg-blue-600 text-white rounded-full px-8 py-3.5 font-bold text-sm shadow-md">Start a Project</a>
-                    <a href="projects.html" class="btn-modern bg-white text-slate-800 border border-slate-200 rounded-full px-8 py-3.5 font-bold text-sm shadow-sm">View Portfolio</a>
+                    <a href="projects.html" class="btn-modern bg-white text-slate-800 border border-slate-200 rounded-full px-8 py-3.5 font-bold text-sm shadow-sm hover:border-slate-300">View Portfolio</a>
+                </div>
+
+                <div class="text-blur-in flex flex-col items-center justify-center gap-3" style="animation-delay: 0.6s;">
+                    <div class="flex -space-x-2">
+                        <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://ui-avatars.com/api/?name=M&background=0D8ABC&color=fff" alt="User">
+                        <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://ui-avatars.com/api/?name=S&background=10B981&color=fff" alt="User">
+                        <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://ui-avatars.com/api/?name=L&background=F59E0B&color=fff" alt="User">
+                        <img class="w-8 h-8 rounded-full border-2 border-white object-cover" src="https://ui-avatars.com/api/?name=A&background=EF4444&color=fff" alt="User">
+                        <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-600">35+</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-amber-400">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <span class="text-sm font-bold text-slate-700">5.0 Rating on Fiverr</span>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="fade-up delay-100 flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70 grayscale">
+        <section class="max-w-6xl mx-auto px-6 py-24 half-scroll">
+            <div class="fade-up flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80 grayscale">
                 <div class="flex items-center gap-2 font-bold text-slate-700 tracking-tight"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> Embedded C/C++</div>
                 <div class="flex items-center gap-2 font-bold text-slate-700 tracking-tight"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg> Edge AI Vision</div>
                 <div class="flex items-center gap-2 font-bold text-slate-700 tracking-tight"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg> ROS 2 Systems</div>
                 <div class="flex items-center gap-2 font-bold text-slate-700 tracking-tight"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg> UAV Architectures</div>
             </div>
 
-            <div class="mt-8 mb-24 flex justify-center fade-up delay-200">
-                <img src="badge.png" alt="Certification Badge" class="h-16 w-auto object-contain opacity-80" onerror="this.style.display='none';" />
+            <div class="mt-12 flex justify-center fade-up delay-100">
+                <img src="badge.png" alt="Certification Badge" class="h-20 w-auto object-contain" onerror="this.style.display='none';" />
             </div>
+        </section>
 
-            <div class="mt-40 pt-32 border-t border-slate-200">
-                <div class="flex flex-col md:flex-row gap-16 items-start fade-up">
-                    <div class="md:w-5/12">
-                        <h2 class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
-                            Empowering Engineers & Builders <br> <span class="text-slate-400">with Real Hardware Solutions.</span>
-                        </h2>
-                    </div>
-                    <div class="md:w-7/12 grid grid-cols-2 gap-x-10 gap-y-16">
-                        <div>
-                            <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter">35<span class="text-blue-600">+</span></div>
-                            <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Projects Delivered</div>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter">12<span class="text-blue-600">+</span></div>
-                            <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Intl. Clients</div>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter">7</div>
-                            <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Core Technologies</div>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter">100<span class="text-blue-600">%</span></div>
-                            <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Satisfaction</div>
+        <section class="max-w-6xl mx-auto px-6 py-32 half-scroll">
+            <div class="flex flex-col md:flex-row gap-16 items-center fade-up">
+                <div class="md:w-5/12">
+                    <h2 class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
+                        Empowering Engineers & Builders <br> <span class="text-slate-400">with Real Hardware Solutions.</span>
+                    </h2>
+                </div>
+                <div class="md:w-7/12 w-full">
+                    <div class="bg-white rounded-[2.5rem] p-10 md:p-14 shadow-sv-card border border-slate-100 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="grid grid-cols-2 gap-x-10 gap-y-16 relative z-10">
+                            <div>
+                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="35">0</span><span class="text-blue-600">+</span></div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Projects Delivered</div>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="12">0</span><span class="text-blue-600">+</span></div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Intl. Clients</div>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="7">0</span></div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Core Technologies</div>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-black text-slate-900 mb-2 font-heading tracking-tighter flex items-center"><span class="counter" data-target="100">0</span><span class="text-blue-600">%</span></div>
+                                <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Satisfaction</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="mt-40 grid md:grid-cols-2 gap-16 items-center">
+        <section class="max-w-6xl mx-auto px-6 py-32 half-scroll">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="fade-up">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
                         Why Robetix
@@ -131,14 +160,14 @@
                     <p class="text-slate-500 mb-10 text-lg leading-relaxed font-medium">We don't just simulate. Watch our systems calculate paths and drive straight into reality. Real constraints, real engineering.</p>
                     <div class="space-y-8">
                         <div class="flex gap-4">
-                            <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">1</div>
+                            <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">1</div>
                             <div>
                                 <h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">Hardware-First Engineering</h4>
                                 <p class="text-sm text-slate-500 font-medium leading-relaxed">Every abstraction is earned through deep hardware understanding.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">2</div>
+                            <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">2</div>
                             <div>
                                 <h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">End-to-End Ownership</h4>
                                 <p class="text-sm text-slate-500 font-medium leading-relaxed">From PCB layout to firmware and complete physical deployment.</p>
@@ -153,121 +182,121 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="mt-40">
-                <div class="flex justify-between items-end mb-10 fade-up">
-                    <div>
-                        <h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-2">Selected Projects</h2>
-                        <p class="text-slate-500 font-medium text-lg">Hardware deployed in the field.</p>
-                    </div>
-                    <a href="projects.html" class="text-blue-600 font-bold text-sm hover:underline">View All &rarr;</a>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="project-wrap fade-up bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
-                        <div class="h-56 bg-slate-100 relative overflow-hidden">
-                            <img src="project4-gcs.jpg" alt="SAR Hexacopter GCS" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-8">
-                            <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">UAV / Edge AI</div>
-                            <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">SAR Hexacopter GCS</h3>
-                            <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">Browser-based offline GCS. YOLOv8 Nano detection, automated search sweeps, payload drops.</p>
-                        </div>
-                    </div>
-                    <div class="project-wrap fade-up delay-100 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
-                        <div class="h-56 bg-slate-100 relative overflow-hidden">
-                            <img src="project1-quadcopter.jpg" alt="APM Quadcopter" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-8">
-                            <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Aerospace / UAV</div>
-                            <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">APM 2.8 Quadcopter</h3>
-                            <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">Return to launch, failsafe logic, and 12-mode guided missions for delivery and photography.</p>
-                        </div>
-                    </div>
-                    <div class="project-wrap fade-up delay-200 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
-                        <div class="h-56 bg-slate-100 relative overflow-hidden">
-                            <img src="project3-face-tracking.jpg" alt="Face Tracking Robot" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-8">
-                            <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Robotics / Vision</div>
-                            <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">Face Tracking Robot</h3>
-                            <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">ESP32 CAM live streaming to PC, extracted via OpenCV/MediaPipe, controlling motors serially.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-40 pt-20 fade-up">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-4">Client Success</h2>
-                    <p class="text-slate-500 font-medium text-lg">Trusted globally by researchers, startups, and engineers.</p>
-                </div>
-
-                <div class="marquee-container py-4">
-                    <div class="marquee-content gap-8 px-4">
-                        <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
-                                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
-                                <p class="text-slate-700 text-sm font-semibold leading-relaxed">"The best person I have ever worked with... accurate in delivery, + he fixed my mistakes. I recommend him 100/100."</p>
-                            </div>
-                            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                                <div class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold">M</div>
-                                <div><h4 class="text-sm font-bold text-slate-900">Menweralhadedit</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Germany</p></div>
-                            </div>
-                        </div>
-                        <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
-                                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">IoT Integration</div>
-                                <p class="text-slate-700 text-sm font-semibold leading-relaxed">"A good developer who listens to everything I mention and gives out suggestions on how we can make functionality better."</p>
-                            </div>
-                            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                                <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold">O</div>
-                                <div><h4 class="text-sm font-bold text-slate-900">Oula Oussi</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UAE</p></div>
-                            </div>
-                        </div>
-                        <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
-                                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Firmware Dev</div>
-                                <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Really nice guy! He understood what I needed and helped me. He answers fast. Highly recommend."</p>
-                            </div>
-                            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                                <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-bold">J</div>
-                                <div><h4 class="text-sm font-bold text-slate-900">Jhonnybzh</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">France</p></div>
-                            </div>
-                        </div>
-                        <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div class="text-amber-400 mb-3 text-sm">★★★★☆</div>
-                                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">PCB Design</div>
-                                <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Nice guy, want to do more projects with him."</p>
-                            </div>
-                            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                                <div class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold">M</div>
-                                <div><h4 class="text-sm font-bold text-slate-900">Mark Anto</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UK</p></div>
-                            </div>
-                        </div>
-                        <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
-                            <div>
-                                <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
-                                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
-                                <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Thanks so much, right now my code works well. He successfully solved my issue."</p>
-                            </div>
-                            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
-                                <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold">S</div>
-                                <div><h4 class="text-sm font-bold text-slate-900">Sarah Councell</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Thailand</p></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </section>
+        
+        <section class="max-w-6xl mx-auto px-6 py-32 half-scroll">
+            <div class="flex justify-between items-end mb-10 fade-up">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-2">Selected Projects</h2>
+                    <p class="text-slate-500 font-medium text-lg">Hardware deployed in the field.</p>
+                </div>
+                <a href="projects.html" class="text-blue-600 font-bold text-sm hover:underline">View All &rarr;</a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="project-wrap fade-up bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden">
+                        <img src="project4-gcs.jpg" alt="SAR Hexacopter GCS" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">UAV / Edge AI</div>
+                        <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">SAR Hexacopter GCS</h3>
+                        <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">Browser-based offline GCS. YOLOv8 Nano detection, automated search sweeps, payload drops.</p>
+                    </div>
+                </div>
+                <div class="project-wrap fade-up delay-100 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden">
+                        <img src="project1-quadcopter.jpg" alt="APM Quadcopter" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Aerospace / UAV</div>
+                        <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">APM 2.8 Quadcopter</h3>
+                        <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">Return to launch, failsafe logic, and 12-mode guided missions for delivery and photography.</p>
+                    </div>
+                </div>
+                <div class="project-wrap fade-up delay-200 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover cursor-pointer" onclick="window.location.href='projects.html'">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden">
+                        <img src="project3-face-tracking.jpg" alt="Face Tracking Robot" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider mb-3">Robotics / Vision</div>
+                        <h3 class="font-heading font-extrabold text-xl mb-3 text-slate-900">Face Tracking Robot</h3>
+                        <p class="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">ESP32 CAM live streaming to PC, extracted via OpenCV/MediaPipe, controlling motors serially.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 half-scroll overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-4">Client Success</h2>
+                <p class="text-slate-500 font-medium text-lg">Trusted globally by researchers, startups, and engineers.</p>
+            </div>
+
+            <div class="marquee-container py-4 fade-up">
+                <div class="marquee-content gap-8 px-4">
+                    <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"The best person I have ever worked with... accurate in delivery, + he fixed my mistakes. I recommend him 100/100."</p>
+                        </div>
+                        <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold">M</div>
+                            <div><h4 class="text-sm font-bold text-slate-900">Menweralhadedit</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Germany</p></div>
+                        </div>
+                    </div>
+                    <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">IoT Integration</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"A good developer who listens to everything I mention and gives out suggestions on how we can make functionality better."</p>
+                        </div>
+                        <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
+                            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold">O</div>
+                            <div><h4 class="text-sm font-bold text-slate-900">Oula Oussi</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UAE</p></div>
+                        </div>
+                    </div>
+                    <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Firmware Dev</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Really nice guy! He understood what I needed and helped me. He answers fast. Highly recommend."</p>
+                        </div>
+                        <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
+                            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-bold">J</div>
+                            <div><h4 class="text-sm font-bold text-slate-900">Jhonnybzh</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">France</p></div>
+                        </div>
+                    </div>
+                    <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm">★★★★☆</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">PCB Design</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Nice guy, want to do more projects with him."</p>
+                        </div>
+                        <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
+                            <div class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold">M</div>
+                            <div><h4 class="text-sm font-bold text-slate-900">Mark Anto</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UK</p></div>
+                        </div>
+                    </div>
+                    <div class="w-[360px] bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="text-amber-400 mb-3 text-sm">★★★★★</div>
+                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
+                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Thanks so much, right now my code works well. He successfully solved my issue."</p>
+                        </div>
+                        <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-5">
+                            <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold">S</div>
+                            <div><h4 class="text-sm font-bold text-slate-900">Sarah Councell</h4><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Thailand</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 mt-32 relative z-10">
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-10 mt-20 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
                 <div class="md:col-span-4">
@@ -305,9 +334,9 @@
                 <div class="md:col-span-2">
                     <h4 class="font-heading font-extrabold text-slate-900 mb-6 text-sm uppercase tracking-widest">Contact</h4>
                     <ul class="space-y-4 text-sm text-slate-500 font-medium">
-                        <li><a href="mailto:hello@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
+                        <li><a href="mailto:sz@robetix.com" class="hover:text-blue-600 transition-colors">Email Us</a></li>
                         <li><a href="https://www.fiverr.com/shahzamanhaider" target="_blank" class="hover:text-blue-600 transition-colors">Fiverr</a></li>
-                        <li><a href="https://linkedin.com" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a></li>
+                        <li><a href="#" target="_blank" class="hover:text-blue-600 transition-colors">Upwork</a></li>
                     </ul>
                 </div>
             </div>
