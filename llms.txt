@@ -1,0 +1,53 @@
+# Robetix
+
+> Robetix is a robotics and embedded systems engineering company based in Pakistan, serving clients in 12+ countries worldwide.
+
+## About
+
+Robetix designs and builds UAV drone systems, Edge AI solutions, custom PCBs, ROS 2 autonomous robots, and embedded firmware. Founded by engineers with published research experience and a track record of delivering real hardware to international clients. Team of 10 engineers covering the full stack from mechanical design to software deployment.
+
+## Services
+
+- UAV & Drone Systems (Pixhawk, ArduPilot, MAVLink)
+- Edge AI & Computer Vision (YOLOv8, TFLite, OpenCV)
+- ROS 2 & Autonomous Robots (SLAM, Nav2, Gazebo)
+- PCB Design & Prototyping (KiCad, Altium)
+- Embedded Firmware (ESP32, STM32, FreeRTOS)
+- CAD & Mechanical Design (Fusion 360, SolidWorks)
+- Custom Robotics Projects (End-to-End)
+
+## Founders
+
+- Shah Zaman Haider — Founder & Lead Engineer. Robotics & IoT Systems Integrator, Did Bachelors in Intelligent Systems & Robotics, published researcher, ex-Research Intern at NCAI NUST Islamabad.
+- Malik Zain Haider — Co-Founder & Hardware Engineer. Student of Intelligent Systems & Robotics. Mechanical design, PCB layout, and Computer Architecture specialist.
+
+## Key Projects
+
+- Autonomous SAR Hexacopter — F500 frame, Pixhawk, Raspberry Pi 5, YOLOv8 person detection, MAVLink, custom browser-based GCS
+- Indoor Autonomous Navigation with SLAM, ROS 2, published in peer-reviewed conference
+- Custom Motor Controller — Bare-metal STM32, custom PCB, FOC
+- Real-Time Object Detection on ESP32-CAM — TFLite, sub-50ms inference
+- Designed and modeled a 6 Degrees-of-Freedom (6DOF) industrial manipulator in Autodesk Fusion 360
+- Designed 8, 16 and 32 bit computer architectures in logisim.
+
+
+## Contact
+
+- Website: https://robetix.com
+- Email: robetix.pak@gmail.com
+- Fiverr: https://www.fiverr.com/shahzamanhaider
+- LinkedIn: https://linkedin.com/company/robetix
+- Location: Pakistan — working globally
+
+## Personal
+- Founder's LinkedIn: https://www.linkedin.com/in/shahzamanhaider/
+- Co-Founder's LinkedIn: https://www.linkedin.com/in/zain-haider-26a133314/
+## Pages
+
+- Homepage: https://robetix.com
+- Services: https://robetix.com/services
+- Projects: https://robetix.com/projects
+- About: https://robetix.com/about
+- Blog: https://robetix.com/blog
+- Contact: https://robetix.com/contact
+- Sitemap: https://robetix.com/sitemap.xml
