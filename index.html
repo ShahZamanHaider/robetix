@@ -38,7 +38,6 @@
 
     <div class="sv-bg"></div>
 
-    <!-- NAVBAR -->
     <header class="fixed top-6 left-0 w-full flex justify-center z-50 px-4">
         <nav class="glass-nav-dark max-w-4xl w-full rounded-full px-4 py-2.5 flex items-center justify-between mx-auto">
             <a href="index.html" class="flex items-center gap-2 pl-2">
@@ -76,7 +75,6 @@
         </nav>
     </header>
 
-    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="fixed inset-0 bg-[#0f172a] z-[100] hidden flex-col items-center justify-center">
         <button class="absolute top-8 right-8 p-2 text-white" onclick="toggleMobileMenu()">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -92,8 +90,7 @@
 
     <main class="flex-grow pt-40 pb-20">
 
-        <!-- HERO -->
-        <section class="max-w-6xl mx-auto px-6 half-scroll py-24">
+        <section class="max-w-6xl mx-auto px-6 pb-20 pt-10">
             <div class="text-center">
                 <h1 class="text-blur-in text-6xl md:text-[6.5rem] font-heading font-black tracking-tight mb-8 text-slate-900 leading-[1.05]">
                     We Build Machines<br>That Think & Act
@@ -128,102 +125,85 @@
             </div>
         </section>
 
-        <!-- TECH STRIP -->
-        <section class="max-w-6xl mx-auto px-6 py-16 half-scroll">
-            <div class="fade-up flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
-                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-                    Embedded C/C++
+        <div class="w-full bg-white/40 backdrop-blur-md border-y border-slate-200/60 py-8 relative z-10 fade-up delay-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 opacity-70">
+                    <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        Embedded C/C++
+                    </div>
+                    <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                        Edge AI Vision
+                    </div>
+                    <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                        ROS 2 Systems
+                    </div>
+                    <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        UAV Architectures
+                    </div>
+                    <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
+                        PCB Design
+                    </div>
                 </div>
-                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
-                    Edge AI Vision
+                
+                <div class="mt-10 flex justify-center">
+                    <img src="badge.png" alt="Certification Badge" class="h-16 w-auto object-contain opacity-80" onerror="this.style.display='none';" />
                 </div>
-                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
-                    ROS 2 Systems
+            </div>
+        </div>
+
+        <section class="max-w-6xl mx-auto px-6 py-32 half-scroll" id="stats-section">
+            <div class="fade-up">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                    <div>
+                        <p class="text-[11px] font-black uppercase tracking-[0.25em] text-blue-600 mb-3">By the numbers</p>
+                        <h2 class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.05] tracking-tight">
+                            Empowering Engineers<br>
+                            <span class="text-slate-300">&amp; Builders.</span>
+                        </h2>
+                    </div>
+                    <p class="text-slate-500 font-medium text-base max-w-xs leading-relaxed md:text-right">
+                        Real hardware. Real clients.<br>Every number earned in the field.
+                    </p>
                 </div>
-                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-                    UAV Architectures
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-0 border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm">
+                    <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 border-b md:border-b-0 group hover:bg-blue-600 transition-colors duration-300">
+                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Projects Delivered</div>
+                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                            <span class="counter" data-target="35">0</span><span class="text-blue-600 group-hover:text-blue-200 transition-colors">+</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 border-b md:border-b-0 group hover:bg-slate-900 transition-colors duration-300 md:border-r">
+                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Intl. Clients</div>
+                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                            <span class="counter" data-target="12">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">+</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 group hover:bg-blue-600 transition-colors duration-300">
+                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Core Technologies</div>
+                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                            <span class="counter" data-target="7">0</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between p-8 md:p-10 group hover:bg-slate-900 transition-colors duration-300">
+                        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Satisfaction Rate</div>
+                        <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
+                            <span class="counter" data-target="100">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">%</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
-                    PCB Design
-                </div>
-                <div class="flex items-center gap-2 font-bold text-slate-600 tracking-tight text-sm">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
-                    SLAM & Nav2
-                </div>
+
             </div>
         </section>
 
-        <!-- STATS — Editorial grid, no generic white card -->
-       <section class="max-w-6xl mx-auto px-6 py-32 half-scroll" id="stats-section">
-    <div class="fade-up">
- 
-        <!-- Editorial header row -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-            <div>
-                <p class="text-[11px] font-black uppercase tracking-[0.25em] text-blue-600 mb-3">By the numbers</p>
-                <h2 class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.05] tracking-tight">
-                    Empowering Engineers<br>
-                    <span class="text-slate-300">&amp; Builders.</span>
-                </h2>
-            </div>
-            <p class="text-slate-500 font-medium text-base max-w-xs leading-relaxed md:text-right">
-                Real hardware. Real clients.<br>Every number earned in the field.
-            </p>
-        </div>
- 
-        <!-- Stats row — bold editorial, no card box -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-0 border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm">
- 
-            <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 group hover:bg-blue-600 transition-colors duration-300">
-                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Projects Delivered</div>
-                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
-                    <span class="counter" data-target="35">0</span><span class="text-blue-600 group-hover:text-blue-200 transition-colors">+</span>
-                </div>
-            </div>
- 
-            <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 group hover:bg-slate-900 transition-colors duration-300 md:border-r">
-                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Intl. Clients</div>
-                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
-                    <span class="counter" data-target="12">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">+</span>
-                </div>
-            </div>
- 
-            <div class="flex flex-col justify-between p-8 md:p-10 border-r border-slate-200 border-t md:border-t-0 group hover:bg-blue-600 transition-colors duration-300">
-                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-200 transition-colors mb-6">Core Technologies</div>
-                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
-                    <span class="counter" data-target="7">0</span>
-                </div>
-            </div>
- 
-            <div class="flex flex-col justify-between p-8 md:p-10 border-t md:border-t-0 group hover:bg-slate-900 transition-colors duration-300">
-                <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-slate-400 transition-colors mb-6">Satisfaction Rate</div>
-                <div class="font-heading font-black tracking-tight leading-none text-slate-900 group-hover:text-white transition-colors" style="font-size: clamp(3rem, 5vw, 4.5rem);">
-                    <span class="counter" data-target="100">0</span><span class="text-blue-600 group-hover:text-blue-400 transition-colors">%</span>
-                </div>
-            </div>
- 
-        </div>
- 
-        <!-- Bottom detail strip -->
-        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
-            <div class="flex items-center gap-2">
-                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Available for new projects</span>
-            </div>
-            <a href="contact.html" class="text-xs font-black text-blue-600 uppercase tracking-widest hover:text-slate-900 transition-colors">
-                Start a conversation &rarr;
-            </a>
-        </div>
- 
-    </div>
-</section>
-
-        <!-- WHY ROBETIX -->
         <section class="max-w-6xl mx-auto px-6 py-24 half-scroll">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="fade-up">
@@ -244,14 +224,7 @@
                             <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">2</div>
                             <div>
                                 <h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">End-to-End Ownership</h4>
-                                <p class="text-sm text-slate-500 font-medium leading-relaxed">From PCB layout to ROS nodes — we handle the full stack so your team doesn't coordinate between 5 vendors.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 text-slate-900 flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                            <div>
-                                <h4 class="font-heading font-bold text-slate-900 mb-1 text-lg">Research-Backed Execution</h4>
-                                <p class="text-sm text-slate-500 font-medium leading-relaxed">Published in peer-reviewed conferences. Research intern at NCAI NUST. Academic rigor, commercial timelines.</p>
+                                <p class="text-sm text-slate-500 font-medium leading-relaxed">From PCB layout to ROS nodes — we handle the full stack so your team doesn't coordinate between vendors.</p>
                             </div>
                         </div>
                     </div>
@@ -259,13 +232,12 @@
 
                 <div class="fade-up delay-100 relative h-[450px] flex items-center justify-center overflow-visible">
                     <div class="w-full h-full relative z-10 flex items-center justify-center">
-                        <dotlottie-player src="https://lottie.host/58c0e6b2-9856-4a3c-9b9a-a8de8cda9b23/7C5j9IWHTQ.lottie" background="transparent" speed="1" style="width:130%;height:130%;" loop autoplay></dotlottie-player>
+                        <dotlottie-player src="ecommerce%20order%20fulfillment%20automation.lottie" background="transparent" speed="1" style="width:130%;height:130%;" loop autoplay></dotlottie-player>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SELECTED PROJECTS -->
         <section class="max-w-6xl mx-auto px-6 py-24 half-scroll">
             <div class="flex justify-between items-end mb-10 fade-up">
                 <div>
@@ -318,120 +290,26 @@
                     </div>
                 </div>
             </div>
-
-            <div class="text-center mt-10 sm:hidden fade-up">
-                <a href="projects.html" class="btn-modern bg-white border border-slate-200 text-slate-700 font-bold text-sm px-8 py-3 rounded-full shadow-sm">View All Projects &rarr;</a>
-            </div>
         </section>
 
-        <!-- TESTIMONIALS MARQUEE -->
-        <section class="py-24 half-scroll overflow-hidden">
-            <div class="max-w-6xl mx-auto px-6 text-center mb-16 fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-black tracking-tight text-slate-900 mb-4">Client Success</h2>
-                <p class="text-slate-500 font-medium text-lg">Trusted globally by researchers, startups, and engineers.</p>
-            </div>
-
-            <div class="marquee-container py-4 fade-up">
-                <div class="marquee-content gap-6 px-4">
-
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
-                        <div>
-                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
-                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"The best person I have ever worked with... accurate in delivery, he fixed my mistakes. I recommend him 100/100."</p>
-                        </div>
-                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
-                            <div class="w-9 h-9 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold shrink-0">M</div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900">Menweralhadedit</h4>
-                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Germany</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
-                        <div>
-                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">IoT Integration</div>
-                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"A good developer who listens to everything I mention and gives suggestions on how to make functionality better."</p>
-                        </div>
-                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
-                            <div class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold shrink-0">O</div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900">Oula Oussi</h4>
-                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UAE</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
-                        <div>
-                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Firmware Dev</div>
-                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Really nice guy! He understood what I needed and helped me. He answers fast. Highly recommend."</p>
-                        </div>
-                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
-                            <div class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm font-bold shrink-0">J</div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900">Jhonnybzh</h4>
-                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">France</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
-                        <div>
-                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★☆</div>
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">PCB Design</div>
-                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Nice guy, great work on the PCB layout. Want to do more projects with him."</p>
-                        </div>
-                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
-                            <div class="w-9 h-9 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold shrink-0">M</div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900">Mark Anto</h4>
-                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">UK</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[340px] bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between shrink-0">
-                        <div>
-                            <div class="text-amber-400 mb-3 text-sm tracking-wider">★★★★★</div>
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4">Embedded Systems</div>
-                            <p class="text-slate-700 text-sm font-semibold leading-relaxed">"Thanks so much, my code works well now. He successfully solved my issue on the first try."</p>
-                        </div>
-                        <div class="mt-7 flex items-center gap-3 border-t border-slate-100 pt-5">
-                            <div class="w-9 h-9 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold shrink-0">S</div>
-                            <div>
-                                <h4 class="text-sm font-bold text-slate-900">Sarah Councell</h4>
-                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Thailand</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA STRIP -->
-        <section class="max-w-6xl mx-auto px-6 py-16 half-scroll">
-            <div class="fade-up bg-slate-900 rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-                <!-- subtle background detail -->
-                <div class="absolute inset-0 opacity-5" style="background-image:linear-gradient(to right,#fff 1px,transparent 1px),linear-gradient(to bottom,#fff 1px,transparent 1px);background-size:40px 40px;"></div>
-                <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-heading font-black text-white tracking-tight mb-3">From Idea to Autonomous System.</h2>
+        <section class="max-w-6xl mx-auto px-6 py-24 half-scroll">
+            <div class="fade-up bg-[#0B132B] rounded-[2rem] p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden border border-slate-800 shadow-2xl">
+                <div class="absolute inset-0 opacity-[0.15]" style="background-image:linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size:32px 32px;"></div>
+                
+                <div class="relative z-10 md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-heading font-black text-white tracking-tight mb-4">From Idea to Autonomous System.</h2>
                     <p class="text-slate-400 font-medium text-lg">Tell us what you're building. We'll tell you how to make it work.</p>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-4 shrink-0 relative z-10">
-                    <a href="contact.html" class="btn-modern bg-blue-600 text-white font-bold px-8 py-3.5 rounded-full text-sm shadow-md text-center">Start a Conversation</a>
-                    <a href="services.html" class="btn-modern bg-white/10 text-white border border-white/20 font-bold px-8 py-3.5 rounded-full text-sm text-center hover:bg-white/20 transition-colors">Our Services</a>
+                
+                <div class="flex flex-col sm:flex-row gap-4 shrink-0 relative z-10 w-full sm:w-auto">
+                    <a href="contact.html" class="bg-[#2563eb] hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-full text-sm shadow-[0_0_20px_rgba(37,99,235,0.4)] text-center transition-all duration-200">Start a Conversation</a>
+                    <a href="services.html" class="bg-slate-800/80 hover:bg-slate-700 text-white border border-slate-600 font-bold px-8 py-4 rounded-full text-sm text-center transition-all duration-200">Our Services</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 pt-20 pb-10 mt-10 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
@@ -467,7 +345,6 @@
                         <li><a href="about.html" class="hover:text-blue-600 transition-colors">About</a></li>
                         <li><a href="projects.html" class="hover:text-blue-600 transition-colors">Portfolio</a></li>
                         <li><a href="blog.html" class="hover:text-blue-600 transition-colors">Insights</a></li>
-                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div class="md:col-span-2">
