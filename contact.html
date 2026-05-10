@@ -165,7 +165,12 @@
                 <h3 class="text-2xl font-heading font-extrabold mb-2 text-slate-900">Send a Message</h3>
                 <p class="text-sm text-slate-500 font-medium mb-8">Tell us about your project and hardware constraints.</p>
                 
-                <form action="https://formspree.io/f/replace_with_your_form_id" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    
+                    <input type="hidden" name="subject" value="New Service Inquiry from Robetix Website">
+
                     <div class="grid md:grid-cols-2 gap-5 mb-5">
                         <div>
                             <label class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Name</label>
@@ -191,6 +196,9 @@
                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Message</label>
                         <textarea name="message" rows="4" required placeholder="Describe your timeline and goals..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-blue-600 focus:bg-white text-sm"></textarea>
                     </div>
+                    
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <button type="submit" class="btn-modern w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-colors cursor-pointer">Send Message</button>
                 </form>
 
